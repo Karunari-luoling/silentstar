@@ -1,0 +1,1509 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Kali Linux安装, Ψ寂ω星Ψ">
+    <meta name="description" content="ε≡≡ﾍ( ´Д`)ﾉ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Kali Linux安装 | Ψ寂ω星Ψ</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Ψ寂ω星Ψ</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Ψ寂ω星Ψ</div>
+        <div class="logo-desc">
+            
+            ε≡≡ﾍ( ´Д`)ﾉ
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Kali Linux安装</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Kali/">
+                                <span class="chip bg-color">Kali</span>
+                            </a>
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">
+                                <span class="chip bg-color">渗透测试</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Kali/" class="post-category">
+                                Kali
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-08-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-01-29
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>[TOC]<br>Kali 是一个 Linux 发行版。与任何一个其它的 Linux 发行版一样，你可以将它永久安装到一个硬盘上。那样它会工作的更好，但是你不能将它作为一个日常使用的操作系统。因为它是为渗透测试构建的，这就是你使用它的全部理由。</p>
+<p>最好是将 Kali 制作为自启动发行版。你可以将 Kali 刻录到一张 DVD 或者是制作到一个自启动 U 盘上来运行它。你没有必要在一个 Kali 上安装任何软件或者保存任何文件。你可以在需要测试一个系统时随时来启动它。它也有非常好的灵活性，可以让运行 Kali 的机器随时运行在想要测试的网络上。<br>Kali 里面有很多的安全工具而不是别的。这就是它能做的事。不管怎么说，Kali 就是一个安全工具。</p>
+<h1 id="安装至硬盘（安装至虚拟机在下面）"><a href="#安装至硬盘（安装至虚拟机在下面）" class="headerlink" title="安装至硬盘（安装至虚拟机在下面）"></a>安装至硬盘（安装至虚拟机在下面）</h1><h2 id="硬件要求"><a href="#硬件要求" class="headerlink" title="硬件要求"></a><strong>硬件要求</strong></h2><p>Kali 系统对硬件有一些最基本的要求及建议。根据用户使用目的，你可以使有更高的配置。这篇文章中假设读者想要把 kali 安装为电脑上唯一的操作系统。</p>
+<ol>
+<li> 至少 10GB 的磁盘空间；强烈建议分配更多的存储空间。</li>
+<li> 至少 512MB 的内存；希望有更多的内存，尤其是在图形界面下。</li>
+<li> 支持 USB 或 CD/DVD 启动方式。</li>
+<li> Kali Linux 系统 ISO 镜像下载地址 <a target="_blank" rel="noopener" href="https://www.kali.org/downloads/%E3%80%82">https://www.kali.org/downloads/。</a></li>
+</ol>
+<h2 id="创建-USB-启动工具"><a href="#创建-USB-启动工具" class="headerlink" title="创建 USB 启动工具"></a><strong>创建 USB 启动工具</strong></h2><p>这里我们使用<a target="_blank" rel="noopener" href="http://rufus.akeo.ie/?locale=zh_CN">rufus</a><br>蓝奏云链接 <a target="_blank" rel="noopener" href="https://wwa.lanzous.com/imrMGfofyxg">https://wwa.lanzous.com/imrMGfofyxg</a><br>Rufus 是一个开源免费的快速制作 U 盘系统启动盘和格式化 USB 的实用小工具，它可以快速把 ISO 格式的系统镜像文件快速制作成可引导的 USB 启动安装盘，支持 Windows 或 Linux 启动。</p>
+<h2 id="全新安装-Kali-Linux-系统"><a href="#全新安装-Kali-Linux-系统" class="headerlink" title="全新安装 Kali Linux 系统"></a><strong>全新安装 Kali Linux 系统</strong></h2><p>1、 首先，把 USB 设备插入到要安装 Kali 操作系统的电脑上，然后从 USB 设备引导系统启动。只要成功地从 USB 设备启动系统，你将会看到下面的图形界面，选择“Install”或者“Graphical Install”选项。<br><code>Graphical Install</code>是可视化安装<br>本指南将使用“Graphical Install”方式进行安装。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123447n6urwtb33rfzdwjz.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>Kali Linux 启动菜单</em></p>
+<p>2、 下面几个界面将会询问用户选择区域设置信息，比如语言、国家，以及键盘布局。</p>
+<p>选择完成之后，系统将会提示用户输入主机名和域名信息。输入合适的环境信息后，点击继续安装。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123447ao2m9m4qce668kec.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>设置 Kali Linux 系统的主机名</em></p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123447zxzzccgh3ghk8ixi.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>设置 Kali Linux 系统的域名</em></p>
+<p>3、 主机名和域名设置完成后，需要设置 root 用户的密码。请勿忘记该密码。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123448p71uz77nexqquh7q.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>设置 Kali Linux 系统用户密码</em></p>
+<p>4、 密码设置完成之后，安装步骤会提示用户选择时区然后停留在硬盘分区界面。</p>
+<p>如果 Kali Linux 是这个电脑上的唯一操作系统，最简单的选项就是使用“Guided – Use Entire Disk”，然后选择你需要安装 Kali 的存储设备。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123448tv2o7d3bbogwhchc.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>选择 Kali Linux 系统安装类型</em></p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123449vxrgrex0tr4k1ege.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>选择 Kali Linux 安装磁盘</em></p>
+<p>5、 下一步将提示用户在存储设备上进行分区。大多数情况下，我们可以把整个系统安装在一个分区内。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123449wb300b0yh063b4b4.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>在分区上安装 Kali Linux 系统</em></p>
+<p>6、 最后一步是提示用户确认将所有的更改写入到主机硬盘。注意，点确认后将会<strong>清空整个磁盘上的所有数据</strong>。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123450hkt5mtzta83ldl8d.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>确认磁盘分区更改</em></p>
+<p>7、 一旦确认分区更改，安装包将会进行复制文件的安装过程。安装完成后，你需要设置一个网络镜像源来获取软件包和系统更新。如果你希望使用 Kali 的软件库，确保开启此功能。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123451kv801zjff08v4v10.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>配置 Kali Linux 包管理器</em></p>
+<p>8、 选择网络镜像源后，系统将会询问你安装 Grub 引导程序。再次说明，本文假设你的电脑上仅安装唯一的 Kali Linux 操作系统。</p>
+<p>在该屏幕上选择“Yes”，用户需要选择要写入引导程序信息的硬盘引导设备。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123452zwkmnqqqqmh297w3.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>安装 Grub 引导程序</em></p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123452nvbs7hgsz8u3pu7h.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>选择安装 Grub 引导程序的分区</em></p>
+<p>9、 当 Grub 安装完成后，系统将会提醒用户重启机器以进入新安装的 Kali Linux 系统。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123453x862e0057m56e37j.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>Kali Linux 系统安装完成</em></p>
+<p>10、 因为本指南使用 Enlightenment 作为 Kali Linux 系统的桌面环境，因此默认情况下是启动进入到<a target="_blank" rel="noopener" href="https://www.linuxcool.com/" title="shell">shell</a>环境。</p>
+<p>使用 root 账号及之前安装过程中设置的密码登录系统，以便运行 Enlightenment 桌面环境。</p>
+<p>登录成功后输入命令startx进入 Enlightenment 桌面环境。</p>
+<pre class="line-numbers language-none"><code class="language-none"># startx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123453t4cq69s4bhnzik4l.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>Kali Linux 下进入 Enlightenment 桌面环境</em></p>
+<p>初次进入 Enlightenment 桌面环境时，它将会询问用户进行一些首选项配置，然后再运行桌面环境。</p>
+<p><img src="https://www.linuxprobe.com/wp-content/uploads/2016/11/123455bwc9y99dhmxcq67w.png" alt="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南" title="全新 Kali Linux 系统安装指南全新 Kali Linux 系统安装指南"></p>
+<p><em>Kali Linux Enlightenment 桌面</em></p>
+<p>此时，你已经成功地安装了 Kali Linux 系统，并可以使用了。后续的文章我们将探讨 Kali 系统中一些有用的工具以及如何使用这些工具来探测主机及网络方面的安全状况。</p>
+<hr>
+<p>原文来自：<a target="_blank" rel="noopener" href="https://linux.cn/article-7986-1.html">https://linux.cn/article-7986-1.html</a></p>
+<hr>
+<h2 id="安装-Kali-Linux-Windows双系统"><a href="#安装-Kali-Linux-Windows双系统" class="headerlink" title="安装 Kali Linux Windows双系统"></a><strong>安装 Kali Linux Windows双系统</strong></h2><p>自己上网上找教程，异曲同工<br><img src="https://s1.ax1x.com/2020/10/07/0dWmlR.jpg"></p>
+<h1 id="安装至虚拟机"><a href="#安装至虚拟机" class="headerlink" title="安装至虚拟机"></a>安装至虚拟机</h1><p>废话不多说，直接开始教程</p>
+<h2 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a><strong>安装虚拟机</strong></h2><h3 id="虚拟机的选择"><a href="#虚拟机的选择" class="headerlink" title="虚拟机的选择"></a>虚拟机的选择</h3><h4 id="Hyper-V"><a href="#Hyper-V" class="headerlink" title="Hyper-V"></a>Hyper-V</h4><p>如果你说windows 10 你可以选择他自带的<code>Hyper-V</code><br>Hyper-V是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BE%AE%E8%BD%AF">微软</a>的一款虚拟化产品，是微软第一个采用类似Vmware ESXi和Citrix Xen的基于hypervisor的技术。</p>
+<hr>
+<h4 id="VMware-Workstation"><a href="#VMware-Workstation" class="headerlink" title="VMware Workstation"></a>VMware Workstation</h4><p>VMware Workstation允许<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><strong>操作系统</strong></a>(OS)和应用程序(Application)在一台<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA">虚拟机</a>内部运行。虚拟机是独立运行<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">主机操作系统</a>的离散环境。在 VMware Workstation 中，你可以在一个窗口中加载一台虚拟机，它可以运行自己的操作系统和应用程序。你可以在运行于桌面上的多台虚拟机之间切换，通过一个网络共享虚拟机(例如一个公司局域网)，挂起和恢复虚拟机以及退出虚拟机，这一切不会影响你的主机操作和任何操作系统或者其它正在运行的应用程序。</p>
+<hr>
+<h3 id="安装虚拟机-1"><a href="#安装虚拟机-1" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><h4 id="Hyper-V-1"><a href="#Hyper-V-1" class="headerlink" title="Hyper-V"></a>Hyper-V</h4><ol>
+<li>打开控制面板选择程序<img src="https://s1.ax1x.com/2020/10/07/0dWlTO.png"></li>
+<li> 选择启用或关闭windows功能<img src="https://s1.ax1x.com/2020/10/07/0dWep9.png"></li>
+<li> 选择Hyper-y<img src="https://s1.ax1x.com/2020/10/07/0dWVfJ.png"></li>
+<li>在Hyper-y中创建kali的虚拟机</li>
+</ol>
+<hr>
+<h4 id="VMware-Workstation-1"><a href="#VMware-Workstation-1" class="headerlink" title="VMware Workstation"></a>VMware Workstation</h4><p>下载VMware Workstation，VMware Workstation的安装简单，就不特殊介绍了<br><a target="_blank" rel="noopener" href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html</a></p>
+<hr>
+<h2 id="安装Kali"><a href="#安装Kali" class="headerlink" title="安装Kali"></a><strong>安装Kali</strong></h2><p>下载<a target="_blank" rel="noopener" href="https://www.kali.org/downloads">Kali Linux</a><br>这里我们使用VMware Workstation做安装示范<br><img src="https://s1.ax1x.com/2020/10/07/0dWQ0K.png"><br>选择自定义<img src="https://s1.ax1x.com/2020/10/07/0dWMm6.png"><br>选择稍后安装镜像<img src="https://s1.ax1x.com/2020/10/07/0dWuOx.png"><br>选择系统，这里我现在Debian10.x<img src="https://s1.ax1x.com/2020/10/07/0dW3kD.png"><br>一直点下一步到选择虚拟机的内存<img src="https://s1.ax1x.com/2020/10/07/0dW8te.png"><br>分配2GB就可以了，这里我为了更加流畅选择4GB<br>选择NAT模式<img src="https://s1.ax1x.com/2020/10/07/0dWYpd.png"><br>一直点下一步至选择磁盘<img src="https://s1.ax1x.com/2020/10/07/0dWGfH.png"><br>选择创建新虚拟磁盘，下一步![]<a target="_blank" rel="noopener" href="https://s1.ax1x.com/2020/10/07/0dWt1A.png">https://s1.ax1x.com/2020/10/07/0dWt1A.png</a>)<br>一直点下一步，至完成<br>编辑虚拟机设置<img src="https://s1.ax1x.com/2020/10/07/0dWUXt.png"><br>选择cd选择使用ISO映像文件<img src="https://s1.ax1x.com/2020/10/07/0dWdnP.png"><br>安装过程详见<code>安装至硬盘</code>的 <strong>全新安装 Kali Linux 系统</strong></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">寂星</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://silentstar.cn/posts/ac54a9a5.html">https://silentstar.cn/posts/ac54a9a5.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">寂星</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Kali/">
+                                    <span class="chip bg-color">Kali</span>
+                                </a>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">
+                                    <span class="chip bg-color">渗透测试</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '2CsH7RbuM5dOHhql1uxhRVuI-gzGzoHsz',
+        appKey: 'O2FmEmY0zIXunI4BMaUffgWt',
+        notify: 'true' === 'true',
+        verify: '' === 'true',
+        visitor: 'true' === 'true',
+        avatar: '白夜',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '随便说点什么叭～'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/efb357db.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/10.jpg" class="responsive-img" alt="我的世界mod开发1.1一切的开始">
+                        
+                        <span class="card-title">我的世界mod开发1.1一切的开始</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" class="post-category">
+                                    我的世界mod开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">我的世界mod开发</span>
+                    </a>
+                    
+                    <a href="/tags/Forge/">
+                        <span class="chip bg-color">Forge</span>
+                    </a>
+                    
+                    <a href="/tags/Mod/">
+                        <span class="chip bg-color">Mod</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/47f09587.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/16.jpg" class="responsive-img" alt="Linux渗透测试和Kali Linux简介">
+                        
+                        <span class="card-title">Linux渗透测试和Kali Linux简介</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Kali/" class="post-category">
+                                    Kali
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Kali/">
+                        <span class="chip bg-color">Kali</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">
+                        <span class="chip bg-color">渗透测试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Ψ寂ω星Ψ<br />'
+            + '文章作者: 寂星<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">寂星</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">13.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "4";
+                    var startDate = "18";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wzhrdx" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:wzhrdx@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1842105028" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1842105028" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
