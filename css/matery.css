@@ -272,7 +272,7 @@ mark {
 }
 
 .text-color {
-    color: #00BFFF !important;
+    color: #0f9d58 !important;
 }
 
 .white-color {
@@ -623,24 +623,12 @@ header .go-back i {
 
 @-webkit-keyframes rainbow {
 
-    0%,
-    100% {
-        background: rgba(0, 191, 255, 0.75);
-        background: linear-gradient(45deg, rgba(151, 248, 255, 0.75) 0%, rgba(0, 191, 255, 0.65) 100%);
-        background: -moz-linear-gradient(135deg, rgba(245, 255, 250, 0.75) 0%, rgba(0, 191, 255, 0.65) 100%);
-        background: -webkit-linear-gradient(135deg, rgba(245, 255, 255, 0.75) 0%, rgba(0, 191, 255, 0.65) 100%);
-    }
+    0%
 }
 
 @keyframes rainbow {
 
-    0%,
-    100% {
-        background: rgba(0, 191, 255, 0.75);
-        background: linear-gradient(45deg, rgba(151, 248, 255, 0.75) 0%, rgba(0, 191, 255, 0.65) 100%);
-        background: -moz-linear-gradient(135deg, rgba(245, 255, 250, 0.75) 0%, rgba(0, 191, 255, 0.65) 100%);
-        background: -webkit-linear-gradient(135deg, rgba(245, 255, 255, 0.75) 0%, rgba(0, 191, 255, 0.65) 100%);
-    }
+    0%
 }
 
 .index-card {
