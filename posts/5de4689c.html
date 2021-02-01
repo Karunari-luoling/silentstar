@@ -29,7 +29,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -422,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    658
+                    638
                 </div>
                 
 
@@ -446,13 +446,13 @@
             <div id="articleContent">
                 <h1 id="创造模式物品栏"><a href="#创造模式物品栏" class="headerlink" title="创造模式物品栏"></a>创造模式物品栏</h1><p>那么显而易见的是，give命令实在是太麻烦了，所以我们需要将物品放进一个创造模式物品栏里。<br>我们直接在<code>ItemSilverNugget()</code>构造器里加一句<code>this.setCreativeTab(CreativeTabs.FOOD);</code>就好了，原版物品栏的名称可以在CreativeTabs类里找到<br>这里我们将银粒放入了食物栏（恶趣味）<br>#新的创造模式物品栏<br>创建物品栏有两种方法一种是直接添加到主类里，一种是新建一个Java类这里我推荐第二种方法</p>
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>在XenoAge.java这个主类里添加字段：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> CreativeTabs TAB_XENO_AGE<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CreativeTabs</span><span class="token punctuation">(</span>MODID<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> CreativeTabs TAB_XENO_AGE<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CreativeTabs</span><span class="token punctuation">(</span>MODID<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> ItemStack <span class="token function">createIcon</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> ItemStack <span class="token function">createIcon</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ItemStack</span><span class="token punctuation">(</span>ItemRegistryHandler<span class="token punctuation">.</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>再在<code>ItemSilverNugget()</code>构造器里加入<code>this.setCreativeTab(XenoAge.TAB_XENO_AGE);</code><br>重启游戏，你会看到一个新的创造模式物品栏。<br>这里<code>SILVER_NUGGET</code>的材质将作为创造物品栏的图标显示</p>
 <p><em>注意：必须以某种方式设置 Tab 的 Icon，如果留 null会引发崩溃</em></p>
@@ -463,17 +463,17 @@
 <span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>creativetab<span class="token punctuation">.</span>CreativeTabs<span class="token punctuation">;</span>
 <span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span>ItemStack<span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TabXenoAge</span> <span class="token keyword">extends</span> <span class="token class-name">CreativeTabs</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TabXenoAge</span> <span class="token keyword">extends</span> <span class="token class-name">CreativeTabs</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> TabXenoAge TAB_XENO_AGE <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TabXenoAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">TabXenoAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">TabXenoAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token string">"xenoage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> ItemStack <span class="token function">createIcon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> ItemStack <span class="token function">createIcon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ItemStack</span><span class="token punctuation">(</span>ItemRegistryHandler<span class="token punctuation">.</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>再在<code>ItemSilverNugget()</code>构造器里加入<code>this.setCreativeTab(TabXenoAge.TAB_XENO_AGE);</code><br>重启游戏，你会看到一个新的创造模式物品栏。</p>
 <h1 id="物品本地化"><a href="#物品本地化" class="headerlink" title="物品本地化"></a>物品本地化</h1><p>现在我们的物品还是一个<code>item.xenoage.silvernugget.name</code>的名字，我们需要给他们添加语言文件</p>
@@ -1311,7 +1311,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.1k</span>&nbsp;字
+                class="white-color">19.9k</span>&nbsp;字
             
             
             

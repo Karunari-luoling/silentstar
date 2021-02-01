@@ -29,7 +29,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -422,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    919
+                    855
                 </div>
                 
 
@@ -453,9 +453,9 @@
 <span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>block<span class="token punctuation">.</span>Block<span class="token punctuation">;</span>
 <span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>block<span class="token punctuation">.</span>material<span class="token punctuation">.</span>Material<span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BlockSilverOre</span> <span class="token keyword">extends</span> <span class="token class-name">Block</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BlockSilverOre</span> <span class="token keyword">extends</span> <span class="token class-name">Block</span> <span class="token punctuation">{</span>
 
-    <span class="token keyword">public</span> <span class="token function">BlockSilverOre</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">BlockSilverOre</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">super</span><span class="token punctuation">(</span>Material<span class="token punctuation">.</span>ROCK<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setTranslationKey</span><span class="token punctuation">(</span>XenoAge<span class="token punctuation">.</span>MODID <span class="token operator">+</span> <span class="token string">".silverore"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setRegistryName</span><span class="token punctuation">(</span><span class="token string">"silver_ore"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -463,8 +463,8 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setHardness</span><span class="token punctuation">(</span><span class="token number">1.5F</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setHarvestLevel</span><span class="token punctuation">(</span><span class="token string">"pickaxe"</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><input disabled="" type="checkbox"> <blockquote>
@@ -487,41 +487,41 @@
 <span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>registries<span class="token punctuation">.</span>IForgeRegistry<span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@Mod</span><span class="token punctuation">.</span>EventBusSubscriber
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BlockRegistryHandler</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BlockRegistryHandler</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> BlockSilverOre BLOCK_SILVER_ORE <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BlockSilverOre</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token annotation punctuation">@SubscribeEvent</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span>RegistryEvent<span class="token punctuation">.</span>Register<span class="token operator">&lt;</span>Block<span class="token operator">></span> event<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span>RegistryEvent<span class="token punctuation">.</span>Register<span class="token operator">&lt;</span>Block<span class="token operator">></span> event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         IForgeRegistry<span class="token operator">&lt;</span>Block<span class="token operator">></span> registry <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         registry<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>BLOCK_SILVER_ORE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改<code>src/main/java/com/wzhrdx/XenoAge/item/ItemRegistryHandler.java</code><br>在<code>public static Item SILVER_NUGGET = new ItemSilverNugget();</code>下方添加</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ItemBlock ITEM_SILVER_ORE <span class="token operator">=</span> <span class="token function">withRegistryName</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ItemBlock</span><span class="token punctuation">(</span>BlockRegistryHandler<span class="token punctuation">.</span>BLOCK_SILVER_ORE<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> ItemBlock <span class="token function">withRegistryName</span><span class="token punctuation">(</span>ItemBlock item<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> ItemBlock <span class="token function">withRegistryName</span><span class="token punctuation">(</span>ItemBlock item<span class="token punctuation">)</span><span class="token punctuation">{</span>
     item<span class="token punctuation">.</span><span class="token function">setRegistryName</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">getBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRegistryName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> item<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="注册材质"><a href="#注册材质" class="headerlink" title="注册材质"></a>注册材质</h1><p>继续修改<code>src/main/java/com/wzhrdx/XenoAge/item/ItemRegistryHandler.java</code><br>，<br>添加如下代码</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token function">registerModel</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">registerModel</span><span class="token punctuation">(</span>ITEM_SILVER_ORE<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//新添加内容</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h1 id="添加材质"><a href="#添加材质" class="headerlink" title="添加材质"></a>添加材质</h1><p>创建包<code>src/main/resources/assets/xenoage/blockstates</code>然后创建<code>silver_ore.json</code><br><code>src/main/resources/assets/xenoage/blockstates/silver_ore.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token property">"variants"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token property">"normal"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"variants"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"normal"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"xenoage:silver_ore"</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>创建<code>src/main/resources/assets/xenoage/models/block/silver_ore.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"parent"</span><span class="token operator">:</span> <span class="token string">"block/cube"</span><span class="token punctuation">,</span>
-  <span class="token property">"textures"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"textures"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"particle"</span><span class="token operator">:</span> <span class="token string">"xenoage:blocks/silver_ore"</span><span class="token punctuation">,</span>
     <span class="token property">"down"</span><span class="token operator">:</span> <span class="token string">"xenoage:blocks/silver_ore"</span><span class="token punctuation">,</span>
     <span class="token property">"up"</span><span class="token operator">:</span> <span class="token string">"xenoage:blocks/silver_ore"</span><span class="token punctuation">,</span>
@@ -529,13 +529,13 @@
     <span class="token property">"south"</span><span class="token operator">:</span> <span class="token string">"xenoage:blocks/silver_ore"</span><span class="token punctuation">,</span>
     <span class="token property">"west"</span><span class="token operator">:</span> <span class="token string">"xenoage:blocks/silver_ore"</span><span class="token punctuation">,</span>
     <span class="token property">"east"</span><span class="token operator">:</span> <span class="token string">"xenoage:blocks/silver_ore"</span>
-  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>创建<code>src/main/resources/assets/xenoage/models/item/silver_ore.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"parent"</span><span class="token operator">:</span> <span class="token string">"xenoage:block/silver_ore"</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>创建<code>src/main/resources/assets/xenoage/textures/blocks</code><br>放入材质<code>silver_ore.png</code>  <img src="https://s1.ax1x.com/2020/08/26/dRYcmF.png" alt="dRYcmF.png"></p>
 <hr>
@@ -556,35 +556,35 @@
 <span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>registries<span class="token punctuation">.</span>IForgeRegistry<span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@Mod</span><span class="token punctuation">.</span>EventBusSubscriber
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemRegistryHandler</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemRegistryHandler</span> <span class="token punctuation">{</span>
 
     <span class="token keyword">public</span> <span class="token keyword">static</span> Item SILVER_NUGGET <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ItemBlock ITEM_SILVER_ORE <span class="token operator">=</span> <span class="token function">withRegistryName</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ItemBlock</span><span class="token punctuation">(</span>BlockRegistryHandler<span class="token punctuation">.</span>BLOCK_SILVER_ORE<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> ItemBlock <span class="token function">withRegistryName</span><span class="token punctuation">(</span>ItemBlock item<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> ItemBlock <span class="token function">withRegistryName</span><span class="token punctuation">(</span>ItemBlock item<span class="token punctuation">)</span><span class="token punctuation">{</span>
         item<span class="token punctuation">.</span><span class="token function">setRegistryName</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">getBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRegistryName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> item<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@SubscribeEvent</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span>RegistryEvent<span class="token punctuation">.</span>Register<span class="token operator">&lt;</span>Item<span class="token operator">></span> event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span>RegistryEvent<span class="token punctuation">.</span>Register<span class="token operator">&lt;</span>Item<span class="token operator">></span> event<span class="token punctuation">)</span><span class="token punctuation">{</span>
         IForgeRegistry<span class="token operator">&lt;</span>Item<span class="token operator">></span> registry <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         registry<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
         registry<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>ITEM_SILVER_ORE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@SideOnly</span><span class="token punctuation">(</span>Side<span class="token punctuation">.</span>CLIENT<span class="token punctuation">)</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">registerModel</span> <span class="token punctuation">(</span>Item item<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">registerModel</span> <span class="token punctuation">(</span>Item item<span class="token punctuation">)</span><span class="token punctuation">{</span>
         ModelResourceLocation modelResourceLocation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelResourceLocation</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">getRegistryName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"inventory"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         ModelLoader<span class="token punctuation">.</span><span class="token function">setCustomModelResourceLocation</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span> modelResourceLocation<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@SubscribeEvent</span>
     <span class="token annotation punctuation">@SideOnly</span><span class="token punctuation">(</span>Side<span class="token punctuation">.</span>CLIENT<span class="token punctuation">)</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onModelRegistry</span><span class="token punctuation">(</span>ModelRegistryEvent event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onModelRegistry</span><span class="token punctuation">(</span>ModelRegistryEvent event<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token function">registerModel</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">registerModel</span><span class="token punctuation">(</span>ITEM_SILVER_ORE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><details>
 <summary>答案</summary>
@@ -1400,7 +1400,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.1k</span>&nbsp;字
+                class="white-color">19.9k</span>&nbsp;字
             
             
             
