@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Logon failed, use ctrl+c to cancel basic credential prompt解决办法</title>
+      <link href="posts/56868.html"/>
+      <url>posts/56868.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法"><a href="#Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法" class="headerlink" title="Logon failed, use ctrl+c to cancel basic credential prompt解决办法"></a>Logon failed, use ctrl+c to cancel basic credential prompt解决办法</h1><p>使用<code>power shell</code>推送时，在弹出框中输入github用户名和密码，但是推送失败，提示Logon failed, use ctrl+c to cancel basic credential prompt.<br>而使用<code>git bash</code>推送时在弹出框中输入github用户名和密码后重新弹出输入框，重新输入后推送成功。<br>原因：新版的GIT不再支持弹出框验证用户名密码的方式，所以推送请求被拒绝了。</p><h3 id="解决办法1"><a href="#解决办法1" class="headerlink" title="解决办法1"></a>解决办法1</h3><p>重新去<code>git</code>官网下载<code>git bash</code> 安装好后重新推送，输入密码之后推送成功。</p><h3 id="解决办法2"><a href="#解决办法2" class="headerlink" title="解决办法2"></a>解决办法2</h3><p>这里有详细教程，我还没有进行尝试<br><a href="https://www.cnblogs.com/steamed-twisted-roll/p/14155092.html">https://www.cnblogs.com/steamed-twisted-roll/p/14155092.html</a></p><p>但是根据的我的猜测，在<code>power shell</code>中应该是行不通的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的世界mod开发本地化和创造模式物品栏</title>
       <link href="posts/5de4689c.html"/>
       <url>posts/5de4689c.html</url>

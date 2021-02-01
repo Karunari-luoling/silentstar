@@ -6,7 +6,7 @@
   <link href="https://silentstar.cn/atom.xml" rel="self"/>
   
   <link href="https://silentstar.cn/"/>
-  <updated>2021-01-29T09:50:45.289Z</updated>
+  <updated>2021-02-01T00:36:39.666Z</updated>
   <id>https://silentstar.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Logon failed, use ctrl+c to cancel basic credential prompt解决办法</title>
+    <link href="https://silentstar.cn/posts/56868.html"/>
+    <id>https://silentstar.cn/posts/56868.html</id>
+    <published>2021-01-31T13:56:50.000Z</published>
+    <updated>2021-02-01T00:36:39.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://silentstar.cn/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://silentstar.cn/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>我的世界mod开发本地化和创造模式物品栏</title>

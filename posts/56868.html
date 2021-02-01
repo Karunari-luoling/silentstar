@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux渗透测试和Kali Linux简介, Ψ寂ω星Ψ">
+    <meta name="keywords" content="Logon failed, use ctrl+c to cancel basic credential prompt解决办法, Ψ寂ω星Ψ">
     <meta name="description" content="ε≡≡ﾍ( ´Д`)ﾉ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux渗透测试和Kali Linux简介 | Ψ寂ω星Ψ</title>
+    <title>Logon failed, use ctrl+c to cancel basic credential prompt解决办法 | Ψ寂ω星Ψ</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux渗透测试和Kali Linux简介</h1>
+                    <h1 class="description center-align post-title">Logon failed, use ctrl+c to cancel basic credential prompt解决办法</h1>
                 </div>
             </div>
         </div>
@@ -380,16 +380,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Kali/">
-                                <span class="chip bg-color">Kali</span>
-                            </a>
-                        
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">
-                                <span class="chip bg-color">渗透测试</span>
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
                     </div>
@@ -400,8 +392,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Kali/" class="post-category">
-                                Kali
+                            <a href="/categories/git/" class="post-category">
+                                git
                             </a>
                         
                     </div>
@@ -413,28 +405,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-06
+                    2021-01-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-29
+                    2021-02-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    204
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    1 分
                 </div>
                 
 
@@ -449,39 +441,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>[TOC]</p>
-<h1 id="Linux渗透测试简介"><a href="#Linux渗透测试简介" class="headerlink" title="Linux渗透测试简介"></a>Linux渗透测试简介</h1><p>渗透测试 (penetration test)并没有一个标准的定义，国外一些安全组织达成共识的通用说法是：渗透测试是通过模拟恶意<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BB%91%E5%AE%A2">黑客</a>的攻击方法，来评估<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F">计算机网络系统</a>安全的一种评估方法。这个过程包括对系统的任何弱点、技术缺陷或漏洞的主动分析，这个分析是从一个攻击者可能存在的位置来进行的，并且从这个位置有条件主动利用安全漏洞。</p>
-<p>换句话来说，渗透测试是指渗透人员在不同的位置（比如从内网、从外网等位置）利用各种手段对某个特定网络进行测试，以期发现和挖掘系统中存在的漏洞，然后输出渗透测试报告，并提交给网络所有者。网络所有者根据渗透人员提供的渗透测试报告，可以清晰知晓系统中存在的安全隐患和问题。</p>
-<h2 id="渗透测试分类"><a href="#渗透测试分类" class="headerlink" title="渗透测试分类"></a><strong>渗透测试分类</strong></h2><h3 id="方法分类"><a href="#方法分类" class="headerlink" title="方法分类"></a><strong>方法分类</strong></h3><p><strong>1、黑箱测试</strong></p>
-<p>黑箱测试又被称为所谓的“Zero-Knowledge Testing”，渗透者完全处于对系统一无所知的状态，通常这类型测试，最初的信息获取来自于DNS、Web、Email及各种公开对外的服务器。</p>
-<p><strong>2、</strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95">白盒测试</a></p>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95">白盒测试</a>与黑箱测试恰恰相反，测试者可以通过正常渠道向被测单位取得各种资料，包括网络拓扑、员工资料甚至网站或其它程序的代码片段，也能够与单位的其它员工（销售、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A8%8B%E5%BA%8F%E5%91%98">程序员</a>、管理者……）进行面对面的沟通。这类测试的目的是模拟企业内部雇员的越权操作。</p>
-<p><strong>3、隐秘测试</strong></p>
-<p>隐秘测试是对被测单位而言的，通常情况下，接受渗透测试的单位网络管理部门会收到通知：在某些时段进行测试。因此能够监测网络中出现的变化。但隐秘测试则被测单位也仅有极少数人知晓测试的存在，因此能够有效地检验单位中的信息安全事件监控、响应、恢复做得是否到位。<br>引用自<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/7363639">百度百科</a></p>
-<h3 id="目标分类"><a href="#目标分类" class="headerlink" title="目标分类"></a><strong>目标分类</strong></h3><p><strong>1、</strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">主机操作系统</a>渗透</p>
-<p>对Windows、Solaris、AIX、Linux、SCO、SGI等操作系统本身进行渗透测试。</p>
-<p><strong>2、</strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F">数据库系统</a>渗透</p>
-<p>对MS-SQL、Oracle、MySQL、Informix、Sybase、DB2、Access等<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F">数据库应用系统</a>进行渗透测试。</p>
-<p><strong>3、应用系统渗透</strong></p>
-<p>对渗透目标提供的各种应用，如ASP、CGI、JSP、PHP等组成的WWW应用进行渗透测试。</p>
-<p><strong>4、网络设备渗透</strong></p>
-<p>对各种防火墙、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F">入侵检测系统</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87">网络设备</a>进行渗透测试。</p>
-<h2 id="安全审查"><a href="#安全审查" class="headerlink" title="安全审查"></a><strong>安全审查</strong></h2><p>渗透测试旨在证明，网络防御机制的运行与你认为的一样良好。往往系统和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%91%98">网络管理员</a>视审查人员或渗透人员为敌人，但实际上他们却是朋友。到位的渗透测试可以证明你的防御确实有效，或者查出问题，帮助你阻挡未来攻击。出钱请自己知道的人来发现网络中的漏洞，总比让自己不知道的人发现漏洞好得多。</p>
-<p>渗透测试可以用来向第三方，譬如投资方或者你的管理人员提供网络安全状况方面的具体证据。事实上，你知道网络中存在的漏洞可能已有一段时日，但无法说服管理人员分配必要资源以补救漏洞。光靠自己，网络或安全管理员的意见往往不会被董事会采纳。如果外面的顾问赞同你的评估，或许会有奇迹出现。</p>
-<p>有关渗透测试的合同或工作说明应该包括你从所得报告中想要获得的各个方面。如果你请人进行有限的测试，得到的只是计算机生成的报告。而渗透测试的真正价值在于由报告所衍生出的分析。进行测试的一方会详细介绍发现结果，并说明其重要性。在有的地方，测试人员还会提议采取何种补救方法，譬如更新服务器、禁用网络服务、改变<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99">防火墙</a>规则等等。</p>
-<h2 id="发展"><a href="#发展" class="headerlink" title="** 发展**"></a>** 发展**</h2><p>如今，大多数攻击进行的是最基本的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F">漏洞扫描</a>，如果攻击得逞，目标就岌岌可危。如果攻击者企图对你站点进行<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F">漏洞扫描</a>，他就会获得大量的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99">防火墙</a>日志消息，而监控网络的任何<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F">入侵检测系统</a>（IDS）也会开始发送有关当前攻击的警报。如果你还没有试过，不妨利用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%99%A8">漏洞扫描器</a>结合IDS对网络来一番试验。别忘了首先获得对方的许可，因为，运行<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%99%A8">漏洞扫描器</a>会使IDS引发警报。</p>
-<p>渗透测试也许是你的网络防御工具箱当中的重要武器之一。应该视之为各种安全审查的一部分，但要确保审查人员胜任这项工作。</p>
-<h2 id="测试方法"><a href="#测试方法" class="headerlink" title="** 测试方法**"></a>** 测试方法**</h2><p>有些渗透测试人员通过使用两套扫描器进行安全评估。这些工具至少能够使整个过程实现部分自动化，这样，技术娴熟的专业人员就可以专注于所发现的问题。如果探查得更深入，则需要连接到任何可疑服务，某些情况下，还要利用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E">漏洞</a>。</p>
-<p>商用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F">漏洞扫描</a>工具在实际应用中存在一个重要的问题：如果它所做的测试未能获得肯定答案，许多产品往往会隐藏测试结果。譬如，有一款知名扫描器就存在这样的缺点：要是它无法进入Cisco<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B7%AF%E7%94%B1%E5%99%A8">路由器</a>，或者无法用SNMP获得其<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC%E5%8F%B7">软件版本号</a>，它就不会做出这样的警告：该路由器容易受到某些拒绝服务（DoS）攻击。如果不知道扫描器隐藏了某些信息（譬如它无法对某种<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E">漏洞</a>进行测试），你可能误以为网络是安全的，而实际上，网络的安全状况可能是危险的。</p>
-<p>除了找到合适工具以及具备资质的组织进行渗透测试外，还应该准确确定测试范围。攻击者会借助社会工程学、偷窃、贿赂或者破门而入等手法，获得有关信息。真正的攻击者是不会仅仅满足于攻击某个企业网络的。通过该网络再攻击其它公司往往是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BB%91%E5%AE%A2">黑客</a>的惯用伎俩。攻击者甚至会通过这种方法进入企业的ISP。</p>
-<h2 id="测试技巧"><a href="#测试技巧" class="headerlink" title="测试技巧"></a><strong>测试技巧</strong></h2><p>为了从渗透测试上获得最大价值，应该向测试组织提供尽可能详细的信息。这些组织同时会签署保密协议，这样，你就可以更放心地共享策略、程序及有关网络的其它关键信息。</p>
-<p>还要确定的是，哪些系统需要测试。虽然你不想漏掉可能会受到攻击的某个系统，但可能仍想分阶段把渗透测试外包出去，以便每个阶段专注于网络的不同部分。</p>
-<p>你还应该制订<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B5%8B%E8%AF%95%E5%87%86%E5%88%99">测试准则</a>，譬如说：渗透测试人员可以探查漏洞并进行测试，但不得利用，因为这可能会危及到你想要保护的系统。</p>
-<p>此外，你还要提供合适的测试途径。如果你想测试在非军事区（DMZ）里面的系统，最好的测试地方就是在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%90%8C%E4%B8%80%E4%B8%AA%E7%BD%91%E6%AE%B5">同一个网段</a>内测试。让渗透测试人员在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99">防火墙</a>外面进行测试听起来似乎更实际，但内部测试可以大大提高发现防火墙原本隐藏的服务器<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E">安全漏洞</a>的可能性。因为，一旦<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99">防火墙</a>设置出现变动，就有可能暴露这些<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E">漏洞</a>，或者有人可能通过漏洞，利用一台DMZ服务器攻击其它服务器。还记得<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%B0%BC%E5%A7%86%E8%BE%BE%E7%97%85%E6%AF%92">尼姆达病毒</a>吗？它就是首次攻击得逞后、利用一台Web服务器发动其它攻击的。</p>
-<p>以外部需要访问的Web或应用服务器为例，你应该考虑与渗透测试人员共享这些应用的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a>，如果测试涉及这些脚本或程序的话。没有<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a>，很难测试ASP或CGI脚本，事先认定攻击者根本不会看到源代码是不明智的。Web<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6">服务器软件</a>里面的漏洞往往会把<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%84%9A%E6%9C%AC">脚本</a>和应用暴露在远程攻击者面前。如果能够获得应用的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a>，则可以提高测试该应用的效率。毕竟，你出钱是为了让渗透测试人员查找漏洞，而不是浪费他们的时间。<br>源自<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/7363639">百度百科</a></p>
-<h1 id="Kali-Linux简介"><a href="#Kali-Linux简介" class="headerlink" title="Kali Linux简介"></a>Kali Linux简介</h1><p>Kali Linux是基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Debian/748667">Debian</a>的Linux发行版， 设计用于数字取证操作系统。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写BackTrack来完成，BackTrack是他们之前写的用于取证的Linux发行版 。</p>
-<p>Kali Linux预装了许多渗透测试软件，包括nmap 、Wireshark 、John the Ripper，以及Aircrack-ng 。用户可通过硬盘、live CD或live USB运行Kali Linux。Kali Linux既有32位和64位的镜像。可用于x86 指令集。同时还有基于ARM架构的镜像，可用于树莓派和三星的ARM Chromebook</p>
-<p>2020年Kali Linux的最新版本为2020.2。<img src="https://s1.ax1x.com/2020/10/07/0dWn61.jpg"></p>
+                <h1 id="Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法"><a href="#Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法" class="headerlink" title="Logon failed, use ctrl+c to cancel basic credential prompt解决办法"></a>Logon failed, use ctrl+c to cancel basic credential prompt解决办法</h1><p>使用<code>power shell</code>推送时，在弹出框中输入github用户名和密码，但是推送失败，提示Logon failed, use ctrl+c to cancel basic credential prompt.<br>而使用<code>git bash</code>推送时在弹出框中输入github用户名和密码后重新弹出输入框，重新输入后推送成功。<br>原因：新版的GIT不再支持弹出框验证用户名密码的方式，所以推送请求被拒绝了。</p>
+<h3 id="解决办法1"><a href="#解决办法1" class="headerlink" title="解决办法1"></a>解决办法1</h3><p>重新去<code>git</code>官网下载<code>git bash</code> 安装好后重新推送，输入密码之后推送成功。</p>
+<h3 id="解决办法2"><a href="#解决办法2" class="headerlink" title="解决办法2"></a>解决办法2</h3><p>这里有详细教程，我还没有进行尝试<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/steamed-twisted-roll/p/14155092.html">https://www.cnblogs.com/steamed-twisted-roll/p/14155092.html</a></p>
+<p>但是根据的我的猜测，在<code>power shell</code>中应该是行不通的</p>
 
             </div>
             <hr/>
@@ -507,7 +470,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://silentstar.cn/posts/47f09587.html">https://silentstar.cn/posts/47f09587.html</a>
+                    <a href="https://silentstar.cn/posts/56868.html">https://silentstar.cn/posts/56868.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,16 +508,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Kali/">
-                                    <span class="chip bg-color">Kali</span>
-                                </a>
-                            
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">
-                                    <span class="chip bg-color">渗透测试</span>
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
                                 </a>
                             
                         </div>
@@ -985,17 +940,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/ac54a9a5.html">
+                <a href="/posts/56868.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/13.jpg" class="responsive-img" alt="Kali Linux安装">
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/5.jpg" class="responsive-img" alt="Logon failed, use ctrl+c to cancel basic credential prompt解决办法">
                         
-                        <span class="card-title">Kali Linux安装</span>
+                        <span class="card-title">Logon failed, use ctrl+c to cancel basic credential prompt解决办法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1005,34 +961,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Kali/" class="post-category">
-                                    Kali
+                            <a href="/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Kali/">
-                        <span class="chip bg-color">Kali</span>
-                    </a>
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">
-                        <span class="chip bg-color">渗透测试</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -1046,13 +995,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/63a9cc99.html">
+                <a href="/posts/5de4689c.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/20.jpg" class="responsive-img" alt="Linux学习笔记(四)">
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/16.jpg" class="responsive-img" alt="我的世界mod开发本地化和创造模式物品栏">
                         
-                        <span class="card-title">Linux学习笔记(四)</span>
+                        <span class="card-title">我的世界mod开发本地化和创造模式物品栏</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1063,14 +1012,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" class="post-category">
+                                    我的世界mod开发
                                 </a>
                             
                             
@@ -1080,8 +1029,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">学习笔记</span>
+                    <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">我的世界mod开发</span>
+                    </a>
+                    
+                    <a href="/tags/Forge/">
+                        <span class="chip bg-color">Forge</span>
+                    </a>
+                    
+                    <a href="/tags/Mod/">
+                        <span class="chip bg-color">Mod</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
