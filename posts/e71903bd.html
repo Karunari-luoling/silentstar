@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -441,50 +432,53 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="根目录结构"><a href="#根目录结构" class="headerlink" title="根目录结构"></a>根目录结构</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">uname</span> -a
-Linux manjaro <span class="token number">4.11</span>.5-1-ARCH <span class="token comment">#1 SMP PREEMPT Wed Jun 14 16:19:27 CEST 2017 x86_64 GNU/Linux</span>
+                <h2 id="根目录结构"><a href="#根目录结构" class="headerlink" title="根目录结构"></a>根目录结构</h2><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">uname</span> -a
+Linux manjaro 4.11.5-1-ARCH <span class="token comment" spellcheck="true">#1 SMP PREEMPT Wed Jun 14 16:19:27 CEST 2017 x86_64 GNU/Linux</span>
 $ <span class="token function">ls</span> -al /
-drwxr-xr-x  <span class="token number">17</span> root root  <span class="token number">4096</span> Jun <span class="token number">28</span> <span class="token number">20</span>:17 <span class="token builtin class-name">.</span>
-drwxr-xr-x  <span class="token number">17</span> root root  <span class="token number">4096</span> Jun <span class="token number">28</span> <span class="token number">20</span>:17 <span class="token punctuation">..</span>
-lrwxrwxrwx   <span class="token number">1</span> root root     <span class="token number">7</span> Jun <span class="token number">21</span> <span class="token number">22</span>:44 bin -<span class="token operator">></span> usr/bin
-drwxr-xr-x   <span class="token number">4</span> root root  <span class="token number">4096</span> Aug <span class="token number">10</span> <span class="token number">22</span>:50 boot
-drwxr-xr-x  <span class="token number">20</span> root root  <span class="token number">3140</span> Aug <span class="token number">11</span> <span class="token number">11</span>:43 dev
-drwxr-xr-x <span class="token number">101</span> root root  <span class="token number">4096</span> Aug <span class="token number">14</span> <span class="token number">13</span>:54 etc
-drwxr-xr-x   <span class="token number">3</span> root root  <span class="token number">4096</span> Apr  <span class="token number">8</span> <span class="token number">19</span>:59 home
-lrwxrwxrwx   <span class="token number">1</span> root root     <span class="token number">7</span> Jun <span class="token number">21</span> <span class="token number">22</span>:44 lib -<span class="token operator">></span> usr/lib
-lrwxrwxrwx   <span class="token number">1</span> root root     <span class="token number">7</span> Jun <span class="token number">21</span> <span class="token number">22</span>:44 lib64 -<span class="token operator">></span> usr/lib
-drwx------   <span class="token number">2</span> root root <span class="token number">16384</span> Apr  <span class="token number">8</span> <span class="token number">19</span>:55 lost+found
-drwxr-xr-x   <span class="token number">2</span> root root  <span class="token number">4096</span> Oct  <span class="token number">1</span>  <span class="token number">2015</span> mnt
-drwxr-xr-x  <span class="token number">15</span> root root  <span class="token number">4096</span> Jul <span class="token number">15</span> <span class="token number">20</span>:10 opt
-dr-xr-xr-x <span class="token number">267</span> root root     <span class="token number">0</span> Aug  <span class="token number">3</span> 09:41 proc
-drwxr-x---   <span class="token number">9</span> root root  <span class="token number">4096</span> Jul <span class="token number">22</span> <span class="token number">22</span>:59 root
-drwxr-xr-x  <span class="token number">26</span> root root   <span class="token number">660</span> Aug <span class="token number">14</span> <span class="token number">21</span>:08 run
-lrwxrwxrwx   <span class="token number">1</span> root root     <span class="token number">7</span> Jun <span class="token number">21</span> <span class="token number">22</span>:44 sbin -<span class="token operator">></span> usr/bin
-drwxr-xr-x   <span class="token number">4</span> root root  <span class="token number">4096</span> May <span class="token number">28</span> <span class="token number">22</span>:07 srv
-dr-xr-xr-x  <span class="token number">13</span> root root     <span class="token number">0</span> Aug  <span class="token number">3</span> 09:41 sys
-drwxrwxrwt  <span class="token number">36</span> root root  <span class="token number">1060</span> Aug <span class="token number">14</span> <span class="token number">21</span>:27 tmp
-drwxr-xr-x  <span class="token number">11</span> root root  <span class="token number">4096</span> Aug <span class="token number">14</span> <span class="token number">13</span>:54 usr
-drwxr-xr-x  <span class="token number">12</span> root root  <span class="token number">4096</span> Jun <span class="token number">28</span> <span class="token number">20</span>:17 var
+drwxr-xr-x  17 root root  4096 Jun 28 20:17 <span class="token keyword">.</span>
+drwxr-xr-x  17 root root  4096 Jun 28 20:17 <span class="token punctuation">..</span>
+lrwxrwxrwx   1 root root     7 Jun 21 22:44 bin -<span class="token operator">></span> usr/bin
+drwxr-xr-x   4 root root  4096 Aug 10 22:50 boot
+drwxr-xr-x  20 root root  3140 Aug 11 11:43 dev
+drwxr-xr-x 101 root root  4096 Aug 14 13:54 etc
+drwxr-xr-x   3 root root  4096 Apr  8 19:59 home
+lrwxrwxrwx   1 root root     7 Jun 21 22:44 lib -<span class="token operator">></span> usr/lib
+lrwxrwxrwx   1 root root     7 Jun 21 22:44 lib64 -<span class="token operator">></span> usr/lib
+drwx------   2 root root 16384 Apr  8 19:55 lost+found
+drwxr-xr-x   2 root root  4096 Oct  1  2015 mnt
+drwxr-xr-x  15 root root  4096 Jul 15 20:10 opt
+dr-xr-xr-x 267 root root     0 Aug  3 09:41 proc
+drwxr-x---   9 root root  4096 Jul 22 22:59 root
+drwxr-xr-x  26 root root   660 Aug 14 21:08 run
+lrwxrwxrwx   1 root root     7 Jun 21 22:44 sbin -<span class="token operator">></span> usr/bin
+drwxr-xr-x   4 root root  4096 May 28 22:07 srv
+dr-xr-xr-x  13 root root     0 Aug  3 09:41 sys
+drwxrwxrwt  36 root root  1060 Aug 14 21:27 tmp
+drwxr-xr-x  11 root root  4096 Aug 14 13:54 usr
+drwxr-xr-x  12 root root  4096 Jun 28 20:17 var
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>由于不同的发行版会有略微的不同，我们这里使用的是基于 Arch 的发行版 Manjaro，以上就是根目录下的内容，我们介绍几个重要的目录：<br>• /bin、/sbin：链接到 /usr/bin，存放 Linux 一些核心的二进制文件，其包含的命令可在 shell 上运行。<br>• /boot：操作系统启动时要用到的程序。<br>• /dev：包含了所有 Linux 系统中使用的外部设备。需要注意的是这里并不是存放外部设备的驱动程序，而是一个访问这些设备的端口。<br>• /etc：存放系统管理时要用到的各种配置文件和子目录。<br>• /etc/rc.d：存放 Linux 启动和关闭时要用到的脚本。<br>• /home：普通用户的主目录。<br>• /lib、/lib64：链接到 /usr/lib，存放系统及软件需要的动态链接共享库。<br>• /mnt：这个目录让用户可以临时挂载其他的文件系统。<br>• /proc：虚拟的目录，是系统内存的映射。可直接访问这个目录来获取系统信息。<br>• /root：系统管理员的主目录。<br>• /srv：存放一些服务启动之后需要提取的数据。<br>• /sys：该目录下安装了一个文件系统 sysfs。该文件系统是内核设备树的一个直观反映。当一个内核对象被创建时，对应的文件和目录也在内核对象子系统中被创建。<br>• /tmp：公用的临时文件存放目录。<br>• /usr：应用程序和文件几乎都在这个目录下。<br>• /usr/src：内核源代码的存放目录。<br>• /var：存放了很多服务的日志信息</p>
 <h2 id="UID-和-GID"><a href="#UID-和-GID" class="headerlink" title="UID 和 GID"></a>UID 和 GID</h2><p>Linux 是一个支持多用户的操作系统，每个用户都有 User ID(UID) 和 Group ID(GID)，UID 是对一个用户的单一身份标识，而 GID 则对应多个 UID。知道某个用户的 UID 和 GID 是非常有用的，一些程序可能就需要 UID/GID 来运行。可以使用 id 命令来查看：</p>
-<pre class="line-numbers language-none"><code class="language-none">$ id root
-uid&#x3D;0(root) gid&#x3D;0(root) groups&#x3D;0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),19(log)
+<pre><code>$ id root
+uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),19(log)
 $ id wzhrdx
-uid&#x3D;1000(wzhrdx) gid&#x3D;1000(wzhrdx) groups&#x3D;1000(wzhrdx),3(sys),7(lp),10(wheel),90(network),91(video),93(optical),95(storage),96(scanner),98(power),56(bumblebee)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+uid=1000(wzhrdx) gid=1000(wzhrdx) groups=1000(wzhrdx),3(sys),7(lp),10(wheel),90(network),91(video),93(optical),95(storage),96(scanner),98(power),56(bumblebee)
+</code></pre>
 <p>UID 为 0 的 root 用户类似于系统管理员，它具有系统的完全访问权。我自己新建的用户 wzhrdx，其 UID 为 1000，是一个普通用户。GID 的关系存储在 /etc/group 文件中：</p>
-<pre class="line-numbers language-none"><code class="language-none">$ cat &#x2F;etc&#x2F;group
+<pre><code>$ cat /etc/group
 root:x:0:root
 bin:x:1:root,bin,daemon
 daemon:x:2:root,bin,daemon
 sys:x:3:root,bin,firmy
-......<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+......
+</code></pre>
 <p>所有用户的信息（除了密码）都保存在 /etc/passwd 文件中，而为了安全起见，加密过的用户密码保存在 /etc/shadow 文件中，此文件只有 root 权限可以访问。<br><code>$ sudo cat /etc/shadow</code><br>由于普通用户的权限比较低，这里使用 sudo 命令可以让普通用户以 root 用户的身份运行某一命令。使用 su 命令则可以切换到一个不同的用户：</p>
-<pre class="line-numbers language-none"><code class="language-none">$ whoami
+<pre><code>$ whoami
 wzhrdx
 $ su root
 $ whoami
-root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+root
+</code></pre>
 <p>whoami 用于打印当前有效的用户名称，shell 中普通用户以 $ 开头，root 用户以 # 开头。在输入密码后，我们已经从 wzhrdx 用户转换到 root 用户了。</p>
 <h2 id="权限设置"><a href="#权限设置" class="headerlink" title="权限设置"></a>权限设置</h2><p>在　Linux 中，文件或目录权限的控制分别以读取、写入、执行 3 种一般权限来区分，另有 3 种特殊权限可供运用。<br>使用 ls -l [file] 来查看某文件或目录的信息：<br>$ ls -l /<br>lrwxrwxrwx   1 root root     7 Jun 21 22:44 bin -&gt; usr/bin<br>drwxr-xr-x   4 root root  4096 Jul 28 08:48 boot<br>-rw-r–r–   1 root root 18561 Apr  2 22:48 desktopfs-pkgs.txt<br>第一栏从第二个字母开始就是权限字符串，权限表示三个为一组，依次是所有者权限、组权限、其他人权限。每组的顺序均为 rwx，如果有相应权限，则表示成相应字母，如果不具有相应权限，则用 - 表示。<br>• <code>r</code>：读取权限，数字代号为 “4”<br>• <code>w</code>：写入权限，数字代号为 “2”<br>• <code>x</code>：执行或切换权限，数字代号为 “1”<br>通过第一栏的第一个字母可知，第一行是一个链接文件 （l），第二行是个目录（d），第三行是个普通文件（-）。<br>用户可以使用 chmod 指令去变更文件与目录的权限。权限范围被指定为所有者（u）、所属组（g）、其他人（o）和所有人（a）。<br>• <code>-R</code>：递归处理，将指令目录下的所有文件及子目录一并处理；<br>• <code>&lt;权限范围&gt;+&lt;权限设置&gt;</code>：开启权限范围的文件或目录的该选项权限设置<br>• 如<code>$ chmod a+r [file]</code>：赋予所有用户读取权限<br>• <code>&lt;权限范围&gt;-&lt;权限设置&gt;</code>：关闭权限范围的文件或目录的该选项权限设置<br>• 如<code>$ chmod u-w [file]</code>：取消所有者写入权限<br>• <code>&lt;权限范围&gt;=&lt;权限设置&gt;</code>：指定权限范围的文件或目录的该选项权限设置；<br>• 如<code>$ chmod g=x [file]</code>：指定组权限为可执行<br>•   <code>$ chmod o=rwx [file]</code>：制定其他人权限为可读、可写和可执行<br><img src="https://s1.ax1x.com/2020/06/25/NBB9wn.png" alt="图片来自firmianay"><br>图片来自firmianay</p>
 
@@ -1260,7 +1254,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

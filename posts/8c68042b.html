@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -419,7 +410,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    195
+                    199
                 </div>
                 
 
@@ -442,18 +433,18 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="QA"><a href="#QA" class="headerlink" title="QA!"></a>QA!</h2><p>由于布置不知道哪一步错了，所以他就报错了，经过我的不懈终于解决<br>错误如下</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
 
 <span class="token operator">></span> ejs@2.7.4 postinstall /root/blog/node_modules/ejs
 <span class="token operator">></span> node ./postinstall.js
 
-sh: <span class="token number">1</span>: node: Permission denied
+sh: 1: node: Permission denied
 <span class="token function">npm</span> WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 <span class="token punctuation">(</span>node_modules/chokidar/node_modules/fsevents<span class="token punctuation">)</span>:
-<span class="token function">npm</span> WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="token keyword">for</span> fsevents@2.1.3: wanted <span class="token punctuation">&#123;</span><span class="token string">"os"</span><span class="token builtin class-name">:</span><span class="token string">"darwin"</span>,<span class="token string">"arch"</span><span class="token builtin class-name">:</span><span class="token string">"any"</span><span class="token punctuation">&#125;</span> <span class="token punctuation">(</span>current: <span class="token punctuation">&#123;</span><span class="token string">"os"</span><span class="token builtin class-name">:</span><span class="token string">"linux"</span>,<span class="token string">"arch"</span><span class="token builtin class-name">:</span><span class="token string">"x64"</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token function">npm</span> WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="token keyword">for</span> fsevents@2.1.3: wanted <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;"os":"darwin","arch":"any"&amp;#125; (current: &amp;#123;"os":"linux","arch":"x64"&amp;#125;)</span>
 
 <span class="token function">npm</span> ERR<span class="token operator">!</span> code ELIFECYCLE
 <span class="token function">npm</span> ERR<span class="token operator">!</span> syscall spawn
-<span class="token function">npm</span> ERR<span class="token operator">!</span> <span class="token function">file</span> <span class="token function">sh</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> <span class="token function">file</span> sh
 <span class="token function">npm</span> ERR<span class="token operator">!</span> errno ENOENT
 <span class="token function">npm</span> ERR<span class="token operator">!</span> ejs@2.7.4 postinstall: <span class="token variable"><span class="token variable">`</span>node ./postinstall.js<span class="token variable">`</span></span>
 <span class="token function">npm</span> ERR<span class="token operator">!</span> spawn ENOENT
@@ -462,11 +453,14 @@ sh: <span class="token number">1</span>: node: Permission denied
 <span class="token function">npm</span> ERR<span class="token operator">!</span> This is probably not a problem with npm. There is likely additional logging output above.
 
 <span class="token function">npm</span> ERR<span class="token operator">!</span> A complete log of this run can be found in:
-<span class="token function">npm</span> ERR<span class="token operator">!</span>     /root/.npm/_logs/2020-10-30T23_06_47_863Z-debug.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf node_modules
+<span class="token function">npm</span> ERR<span class="token operator">!</span>     /root/.npm/_logs/2020-10-30T23_06_47_863Z-debug.log
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">rm</span> -rf node_modules
 <span class="token function">rm</span> -rf package-lock.json
 <span class="token function">npm</span> cache clean --force
-<span class="token function">npm</span> <span class="token function">install</span> --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">npm</span> <span class="token function">install</span> --force
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
             </div>
             <hr/>
 
@@ -1241,7 +1235,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

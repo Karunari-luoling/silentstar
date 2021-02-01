@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -478,8 +469,9 @@
 </tr>
 </tbody></table>
 <h2 id="开启核心转储"><a href="#开启核心转储" class="headerlink" title="开启核心转储"></a>开启核心转储</h2><p>输入命令 <code>ulimit -c</code>，输出结果为<code> 0</code>，说明默认是关闭的。<br>输入命令 <code>ulimit -c unlimited </code>即可在当前终端开启核心转储功能。<br>如果想让核心转储功能永久开启，可以修改文件 <code>/etc/security/limits.conf</code>，增加一行：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#&lt;domain>      &lt;type>  &lt;item>         &lt;value></span>
-*               soft    core            unlimited<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#&lt;domain>      &lt;type>  &lt;item>         &lt;value></span>
+*               soft    core            unlimited
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="修改转储文件保存路径"><a href="#修改转储文件保存路径" class="headerlink" title="修改转储文件保存路径"></a>修改转储文件保存路径</h2><p>• 通过修改 <code>/proc/sys/kernel/core_uses_pid</code>，可以使生成的核心转储文件名变为 <code>core.[pid]</code> 的模式。<br><code># echo 1 &gt; /proc/sys/kernel/core_uses_pid</code><br>• 还可以修改 <code>/proc/sys/kernel/core_pattern</code> 来控制生成核心转储文件的保存位置和文件名格式。<br><code># echo /tmp/core-%e-%p-%t &gt; /proc/sys/kernel/core_pattern</code><br>此时生成的文件保存在<code> /tmp/</code> 目录下，文件名格式为<code> core-[filename]-[pid]-[time]</code>。</p>
 <h2 id="使用-gdb-调试核心转储文件"><a href="#使用-gdb-调试核心转储文件" class="headerlink" title="使用 gdb 调试核心转储文件"></a>使用 gdb 调试核心转储文件</h2><p><code>gdb [filename] [core file]</code></p>
 
@@ -1263,7 +1255,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

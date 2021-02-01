@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -431,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    951
+                    968
                 </div>
                 
 
@@ -463,25 +454,26 @@
 <p>好现在我们来创建一个新的物品，如果你有经常翻看net.minecraft源码,在item包里面会看到在mc中遇到的各种物品，都继承了Item类，那么我们做的物品也要继承这个类（继承这个类的一般都是物品）</p>
 <p>新建一个包com.wzhrdx.XenoAge.item,并在其中创建一个类ItemSilverNugget(注意注意类的名称前面推荐是Item,禁止乱搞,xiaobang路过)</p>
 <h1 id="创建一个物品"><a href="#创建一个物品" class="headerlink" title="创建一个物品"></a>创建一个物品</h1><p>这里由于我们写的是<code>XenoAge</code>使用我们在这里创建<code>银粒</code>。新建java类<code>item.ItemSilverNugget</code></p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span></span><span class="token class-name">XenoAge</span><span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span>XenoAge<span class="token punctuation">.</span>item<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span></span><span class="token class-name">XenoAge<span class="token punctuation">.</span>XenoAge</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span>XenoAge<span class="token punctuation">.</span>XenoAge<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span></span><span class="token class-name">Item</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span>Item<span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemSilverNugget</span> <span class="token keyword">extends</span> <span class="token class-name">Item</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemSilverNugget</span> <span class="token keyword">extends</span> <span class="token class-name">Item</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token class-name">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token function">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
 <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setMaxStackSize</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setTranslationKey</span><span class="token punctuation">(</span><span class="token class-name">XenoAge</span><span class="token punctuation">.</span>MODID <span class="token operator">+</span> <span class="token string">".silvernugget"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setTranslationKey</span><span class="token punctuation">(</span>XenoAge<span class="token punctuation">.</span>MODID <span class="token operator">+</span> <span class="token string">".silvernugget"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setRegistryName</span><span class="token punctuation">(</span><span class="token string">"silver_nugget"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>setTranslationKey</code>这是新的方法，以前的方法为<code>setUnlocalizedName()</code></li>
 </ul>
@@ -489,102 +481,105 @@
 <p>设置注册名字，当你在游戏中想要获得你的物品那就需要这个名字，比如在本教程你需要这样做<code>give @a xenoage:silver_nugget</code>，当然此时如果你启动的话，不出意外会报错</p>
 <h1 id="实例化并注册"><a href="#实例化并注册" class="headerlink" title="实例化并注册"></a>实例化并注册</h1><p>新建java类<code>item.ItemRegistryHandler</code></p>
 <p><code>src/main/java/com/wzhrdx/XenoAge/item/ItemRegistryHandler.java</code></p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span></span><span class="token class-name">XenoAge</span><span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span>XenoAge<span class="token punctuation">.</span>item<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span></span><span class="token class-name">Item</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span>Item<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">RegistryEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>event<span class="token punctuation">.</span>RegistryEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span></span><span class="token class-name">Mod</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>Mod<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>eventhandler<span class="token punctuation">.</span></span><span class="token class-name">SubscribeEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>eventhandler<span class="token punctuation">.</span>SubscribeEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>registries<span class="token punctuation">.</span></span><span class="token class-name">IForgeRegistry</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>registries<span class="token punctuation">.</span>IForgeRegistry<span class="token punctuation">;</span>
 
-<span class="token annotation punctuation">@Mod.EventBusSubscriber</span>
+<span class="token annotation punctuation">@Mod</span><span class="token punctuation">.</span>EventBusSubscriber
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemRegistryHandler</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemRegistryHandler</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">ItemSilverNugget</span> SILVER_NUGGET <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ItemSilverNugget SILVER_NUGGET <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@SubscribeEvent</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span><span class="token class-name">RegistryEvent<span class="token punctuation">.</span>Register</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">></span></span> event<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span>RegistryEvent<span class="token punctuation">.</span>Register<span class="token operator">&lt;</span>Item<span class="token operator">></span> event<span class="token punctuation">)</span>
 
-<span class="token punctuation">&#123;</span>
+<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token class-name">IForgeRegistry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">></span></span> registry <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+IForgeRegistry<span class="token operator">&lt;</span>Item<span class="token operator">></span> registry <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 registry<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span> <span class="token comment">//这里是实例话物品</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里是实例话物品</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="绑定材质"><a href="#绑定材质" class="headerlink" title="绑定材质"></a>绑定材质</h1><p>为<code>ItemRegistryHandler</code>添加一个方法，修改后如下</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span></span><span class="token class-name">XenoAge</span><span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span>XenoAge<span class="token punctuation">.</span>item<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>client<span class="token punctuation">.</span>renderer<span class="token punctuation">.</span>block<span class="token punctuation">.</span>model<span class="token punctuation">.</span></span><span class="token class-name">ModelResourceLocation</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>client<span class="token punctuation">.</span>renderer<span class="token punctuation">.</span>block<span class="token punctuation">.</span>model<span class="token punctuation">.</span>ModelResourceLocation<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span></span><span class="token class-name">Item</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>item<span class="token punctuation">.</span>Item<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>client<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ModelRegistryEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>client<span class="token punctuation">.</span>event<span class="token punctuation">.</span>ModelRegistryEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>client<span class="token punctuation">.</span>model<span class="token punctuation">.</span></span><span class="token class-name">ModelLoader</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>client<span class="token punctuation">.</span>model<span class="token punctuation">.</span>ModelLoader<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">RegistryEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>event<span class="token punctuation">.</span>RegistryEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span></span><span class="token class-name">Mod</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>Mod<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>eventhandler<span class="token punctuation">.</span></span><span class="token class-name">SubscribeEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>eventhandler<span class="token punctuation">.</span>SubscribeEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>relauncher<span class="token punctuation">.</span></span><span class="token class-name">Side</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>relauncher<span class="token punctuation">.</span>Side<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>relauncher<span class="token punctuation">.</span></span><span class="token class-name">SideOnly</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>relauncher<span class="token punctuation">.</span>SideOnly<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>registries<span class="token punctuation">.</span></span><span class="token class-name">IForgeRegistry</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>registries<span class="token punctuation">.</span>IForgeRegistry<span class="token punctuation">;</span>
 
-<span class="token annotation punctuation">@Mod.EventBusSubscriber</span>
+<span class="token annotation punctuation">@Mod</span><span class="token punctuation">.</span>EventBusSubscriber
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemRegistryHandler</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ItemRegistryHandler</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">ItemSilverNugget</span> SILVER_NUGGET <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ItemSilverNugget SILVER_NUGGET <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ItemSilverNugget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@SubscribeEvent</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span><span class="token class-name">RegistryEvent<span class="token punctuation">.</span>Register</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">></span></span> event<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onRegistry</span><span class="token punctuation">(</span>RegistryEvent<span class="token punctuation">.</span>Register<span class="token operator">&lt;</span>Item<span class="token operator">></span> event<span class="token punctuation">)</span>
 
-<span class="token punctuation">&#123;</span>
+<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token class-name">IForgeRegistry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Item</span><span class="token punctuation">></span></span> registry <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+IForgeRegistry<span class="token operator">&lt;</span>Item<span class="token operator">></span> registry <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 registry<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span> <span class="token comment">//这里是实例话物品</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里是实例话物品</span>
 
-<span class="token annotation punctuation">@SubscribeEvent</span> <span class="token comment">//监听net.minecraftforge.client.event.ModelRegistryEvent事件</span>
+<span class="token annotation punctuation">@SubscribeEvent</span> <span class="token comment" spellcheck="true">//监听net.minecraftforge.client.event.ModelRegistryEvent事件</span>
 
-<span class="token annotation punctuation">@SideOnly</span><span class="token punctuation">(</span><span class="token class-name">Side</span><span class="token punctuation">.</span>CLIENT<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@SideOnly</span><span class="token punctuation">(</span>Side<span class="token punctuation">.</span>CLIENT<span class="token punctuation">)</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onModelRegistry</span><span class="token punctuation">(</span><span class="token class-name">ModelRegistryEvent</span> event<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">onModelRegistry</span><span class="token punctuation">(</span>ModelRegistryEvent event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token class-name">ModelLoader</span><span class="token punctuation">.</span><span class="token function">setCustomModelResourceLocation</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
+ModelLoader<span class="token punctuation">.</span><span class="token function">setCustomModelResourceLocation</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
 
 <span class="token keyword">new</span> <span class="token class-name">ModelResourceLocation</span><span class="token punctuation">(</span>SILVER_NUGGET<span class="token punctuation">.</span><span class="token function">getRegistryName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"inventory"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span> <span class="token comment">//这里是绑定材质</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里是绑定材质</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>创建包<code>assets.xenoage.models.item</code>，创建json文件<code>silver_nugget.json</code></p>
 <p><code>src/main/resources/assets/xenoage/models/item/silver_nugget.json</code></p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
 
 <span class="token property">"parent"</span><span class="token operator">:</span> <span class="token string">"item/generated"</span><span class="token punctuation">,</span>
 
-<span class="token property">"textures"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+<span class="token property">"textures"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
 
 <span class="token property">"layer0"</span><span class="token operator">:</span> <span class="token string">"xenoage:items/silver_nugget"</span>
 
-<span class="token punctuation">&#125;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>创建材质包位置<code>src/main/resources/assets/xenoage/textures/items</code></p>
 <p>将材质放入，材质的名字要和你的注册名字一样这里是<code>silver_nugget.png</code>，”<img src="https://s1.ax1x.com/2020/08/26/dWVxvn.png" alt="dWVxvn.png"></p>
 <p>这里我们运行游戏输入<code>/give @a xenoage:silver_nugget</code>我们就会得到这个物品</p>
@@ -1493,7 +1488,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

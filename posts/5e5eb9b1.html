@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -423,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    11 分
                 </div>
                 
 
@@ -447,9 +438,9 @@
             <div id="articleContent">
                 <h2 id="新建一个Qt项目"><a href="#新建一个Qt项目" class="headerlink" title="新建一个Qt项目"></a>新建一个Qt项目</h2><p>新建一个<code>Qt Widgets Applications</code>项目<br>在<code>Details</code>不勾选<code>Generate form</code><br><img src="https://s1.ax1x.com/2020/04/22/JtF61K.png" alt="图1"></p>
 <p>一直点下一步<br>在<code>Kits</code>里勾选<code>MinGw 32-bit</code>和<code>MinGW 64-bit</code><br>在<code>mainwindows.h</code>里修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
+<pre class="line-numbers language-css"><code class="language-css">
 #ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+<span class="token hexcode">#def</span>ine MAINWINDOW_H
 
 
 #include &lt;QMainWindow>
@@ -457,16 +448,16 @@
 #include &lt;QTextEdit>    //文本
 
 QT_BEGIN_NAMESPACE
-class QTextEdit<span class="token selector">;
+class QTextEdit<span class="token punctuation">;</span>
 QT_END_NAMESPACE
 
 
-class MainWindow : public QMainWindow</span>
-<span class="token punctuation">&#123;</span>
+class <span class="token property">MainWindow</span> <span class="token punctuation">:</span> public QMainWindow
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     Q_OBJECT
 
 <span class="token property">public</span><span class="token punctuation">:</span>
-    <span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent = 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent = <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token property">private</span><span class="token punctuation">:</span>
 
@@ -474,62 +465,62 @@ class MainWindow : public QMainWindow</span>
 
 private <span class="token property">slots</span><span class="token punctuation">:</span>
     void <span class="token function">setupEditor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
 
 
 #endif // MAINWINDOW_H
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>mainwindows.cpp</code>里修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
+<pre class="line-numbers language-css"><code class="language-css">
 
-<span class="token selector">#include &lt;QtWidgets>
+#include &lt;QtWidgets>
 
-#include "mainwindow.h"
+#include <span class="token string">"mainwindow.h"</span>
 
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent<span class="token punctuation">)</span>
+    <span class="token punctuation">:</span> <span class="token function">QMainWindow</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
 
     <span class="token function">setupEditor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">setCentralWidget</span><span class="token punctuation">(</span>editor<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">setWindowTitle</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"IDE"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::setupEditor()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">setupEditor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     QFont font<span class="token punctuation">;</span>
-    font.<span class="token function">setFamily</span><span class="token punctuation">(</span><span class="token string">"Courier"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    font.<span class="token function">setFixedPitch</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    font.<span class="token function">setPointSize</span><span class="token punctuation">(</span>10<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token number">.</span><span class="token function">setFamily</span><span class="token punctuation">(</span><span class="token string">"Courier"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token number">.</span><span class="token function">setFixedPitch</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token number">.</span><span class="token function">setPointSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     editor = new QTextEdit<span class="token punctuation">;</span>
     editor-><span class="token function">setFont</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>main.cpp</code>里修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
-<span class="token selector">#include "mainwindow.h"
+<pre class="line-numbers language-css"><code class="language-css">
+#include <span class="token string">"mainwindow.h"</span>
 
 #include &lt;QApplication>
 
-int main(int argc, char *argv[])</span>
-<span class="token punctuation">&#123;</span>
-    QApplication <span class="token function">app</span><span class="token punctuation">(</span>argc<span class="token punctuation">,</span> argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+int <span class="token function">main</span><span class="token punctuation">(</span>int argc, char *argv[]<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    QApplication <span class="token function">app</span><span class="token punctuation">(</span>argc, argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
     MainWindow window<span class="token punctuation">;</span>
-    window.<span class="token function">resize</span><span class="token punctuation">(</span>640<span class="token punctuation">,</span> 512<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    window.<span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    return app.<span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+    window<span class="token number">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token number">640</span>, <span class="token number">512</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    window<span class="token number">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    return app<span class="token number">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="添加状态栏"><a href="#添加状态栏" class="headerlink" title="添加状态栏"></a>添加状态栏</h2><p>在<code>mainwindows.h</code>里修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
+<pre class="line-numbers language-css"><code class="language-css">
 #ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+<span class="token hexcode">#def</span>ine MAINWINDOW_H
 
 
 #include &lt;QMainWindow>
@@ -541,16 +532,16 @@ int main(int argc, char *argv[])</span>
 #include &lt;QFileDialog>
 
 QT_BEGIN_NAMESPACE
-class QTextEdit<span class="token selector">;
+class QTextEdit<span class="token punctuation">;</span>
 QT_END_NAMESPACE
 
 
-class MainWindow : public QMainWindow</span>
-<span class="token punctuation">&#123;</span>
+class <span class="token property">MainWindow</span> <span class="token punctuation">:</span> public QMainWindow
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     Q_OBJECT
 
 <span class="token property">public</span><span class="token punctuation">:</span>
-    <span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent = 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent = <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token property">private</span><span class="token punctuation">:</span>
 
@@ -600,23 +591,23 @@ private <span class="token property">slots</span><span class="token punctuation"
     void <span class="token function">setupFileMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     void <span class="token function">setupHelpMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     void <span class="token function">about</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
 
 
 #endif // MAINWINDOW_H
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>mainwindows.cpp</code>里修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
+<pre class="line-numbers language-css"><code class="language-css">
 
-<span class="token selector">#include &lt;QtWidgets>
+#include &lt;QtWidgets>
 
-#include "mainwindow.h"
+#include <span class="token string">"mainwindow.h"</span>
 
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent<span class="token punctuation">)</span>
+    <span class="token punctuation">:</span> <span class="token function">QMainWindow</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     <span class="token function">setupFileMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">setupHelpMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">setupEditor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -631,28 +622,28 @@ MainWindow::MainWindow(QWidget *parent)
     //添加菜单项，并为其设定快捷键
     //【文件菜单栏】
     file_menu = this-><span class="token function">menuBar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>-><span class="token function">addMenu</span><span class="token punctuation">(</span><span class="token string">"文件"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    new_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"新建文件"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>  //第一个参数是菜单项的文字，第二个参数是指向主体的指针
+    new_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"新建文件"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>  //第一个参数是菜单项的文字，第二个参数是指向主体的指针
     new_file -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+n"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   //设定快捷键
     file_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>new_file<span class="token punctuation">)</span><span class="token punctuation">;</span>        //关联 菜单栏 与 菜单项
     file_menu -><span class="token function">addSeparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             //在文件下拉菜单上面显示一个分隔符
 
-    open_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"打开文件"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    open_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"打开文件"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     file_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>open_file<span class="token punctuation">)</span><span class="token punctuation">;</span>
     open_file -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+o"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    save_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"保存文件"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    save_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"保存文件"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     file_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>save_file<span class="token punctuation">)</span><span class="token punctuation">;</span>
     save_file -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+s"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    exit_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"退出"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    exit_file = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"退出"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     file_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>exit_file<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
 
     //【编译菜单栏】
     comp_menu = this-><span class="token function">menuBar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>-><span class="token function">addMenu</span><span class="token punctuation">(</span><span class="token string">"编译"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    comp_comp = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"编译"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span> comp_menu-><span class="token function">addAction</span><span class="token punctuation">(</span>comp_comp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    run_comp = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"运行"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>  comp_menu-><span class="token function">addAction</span><span class="token punctuation">(</span>run_comp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    comp_comp = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"编译"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span> comp_menu-><span class="token function">addAction</span><span class="token punctuation">(</span>comp_comp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    run_comp = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"运行"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>  comp_menu-><span class="token function">addAction</span><span class="token punctuation">(</span>run_comp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     //【帮助菜单栏】
     help_menu = this-><span class="token function">menuBar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>-><span class="token function">addMenu</span><span class="token punctuation">(</span><span class="token string">"帮助"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -660,66 +651,66 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     //【鼠标事件与函数关联】当鼠标点击exit_file 菜单的时候，执行on_<span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>函数
-    <span class="token function">connect</span><span class="token punctuation">(</span>exit_file<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>open_file<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>save_file<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>new_file<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>copy_edit<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>paste_edit<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">paste</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>cut_edit<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">cut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>allselect_edit<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">allselect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">connect</span><span class="token punctuation">(</span>editor<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">textChanged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">changed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
-    <span class="token function">connect</span><span class="token punctuation">(</span>comp_comp<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">comp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
-    <span class="token function">connect</span><span class="token punctuation">(</span>run_comp<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
+    <span class="token function">connect</span><span class="token punctuation">(</span>exit_file,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>open_file,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>save_file,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>new_file,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>copy_edit,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>paste_edit,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">paste</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>cut_edit,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">cut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>allselect_edit,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">allselect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>editor,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">textChanged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">changed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
+    <span class="token function">connect</span><span class="token punctuation">(</span>comp_comp,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">comp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
+    <span class="token function">connect</span><span class="token punctuation">(</span>run_comp,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
 
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
 
 
-<span class="token selector">void MainWindow::on_open(const QString &amp;path)</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">open</span><span class="token punctuation">(</span>const QString &amp;path<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     QString fileName = path<span class="token punctuation">;</span>
 
-    if <span class="token punctuation">(</span>fileName.<span class="token function">isNull</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        fileName = <span class="token property">QFileDialog</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">getOpenFileName</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span> <span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"Open File"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">"C++ Files (*.cpp *.h)"</span><span class="token punctuation">)</span><span class="token selector">;
+    if <span class="token punctuation">(</span>fileName<span class="token number">.</span><span class="token function">isNull</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        fileName = <span class="token property">QFileDialog</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">getOpenFileName</span><span class="token punctuation">(</span>this, <span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"Open File"</span><span class="token punctuation">)</span>, <span class="token string">""</span>, <span class="token string">"C++ Files (*.cpp *.h)"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    if (!fileName.isEmpty())</span> <span class="token punctuation">&#123;</span>
+    if <span class="token punctuation">(</span>!fileName<span class="token number">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
         QFile <span class="token function">file</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        if <span class="token punctuation">(</span>file.<span class="token function">open</span><span class="token punctuation">(</span><span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>ReadOnly | <span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Text<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            editor-><span class="token function">setPlainText</span><span class="token punctuation">(</span>file.<span class="token function">readAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
+        if <span class="token punctuation">(</span>file<span class="token number">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>ReadOnly | <span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Text<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            editor-><span class="token function">setPlainText</span><span class="token punctuation">(</span>file<span class="token number">.</span><span class="token function">readAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::setupFileMenu()</span>
-<span class="token punctuation">&#123;</span>
-    QMenu *fileMenu = new <span class="token function">QMenu</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"&amp;File"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">setupFileMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    QMenu *fileMenu = new <span class="token function">QMenu</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"&amp;File"</span><span class="token punctuation">)</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">menuBar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>-><span class="token function">addMenu</span><span class="token punctuation">(</span>fileMenu<span class="token punctuation">)</span><span class="token punctuation">;</span>
     //【编辑菜单栏】
     edit_menu = this-><span class="token function">menuBar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>-><span class="token function">addMenu</span><span class="token punctuation">(</span><span class="token string">"编辑"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    copy_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"复制"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    copy_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"复制"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     copy_edit -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+c"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     edit_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>copy_edit<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    paste_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"粘贴"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    paste_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"粘贴"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     paste_edit -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+v"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
      edit_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>paste_edit<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    cut_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"剪切"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cut_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"剪切"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     cut_edit -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+x"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     edit_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>cut_edit<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    allselect_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"全选"</span><span class="token punctuation">,</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    allselect_edit = new <span class="token function">QAction</span><span class="token punctuation">(</span><span class="token string">"全选"</span>,this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     allselect_edit -><span class="token function">setShortcut</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"ctrl+a"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     edit_menu -><span class="token function">addAction</span><span class="token punctuation">(</span>allselect_edit<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::setupEditor()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">setupEditor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     QFont font<span class="token punctuation">;</span>
-    font.<span class="token function">setFamily</span><span class="token punctuation">(</span><span class="token string">"Courier"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    font.<span class="token function">setFixedPitch</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    font.<span class="token function">setPointSize</span><span class="token punctuation">(</span>10<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token number">.</span><span class="token function">setFamily</span><span class="token punctuation">(</span><span class="token string">"Courier"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token number">.</span><span class="token function">setFixedPitch</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token number">.</span><span class="token function">setPointSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     editor = new QTextEdit<span class="token punctuation">;</span>
     editor-><span class="token function">setFont</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -727,211 +718,213 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     QFile <span class="token function">file</span><span class="token punctuation">(</span><span class="token string">"mainwindow.h"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    if <span class="token punctuation">(</span>file.<span class="token function">open</span><span class="token punctuation">(</span><span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>ReadOnly | <span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Text<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        editor-><span class="token function">setPlainText</span><span class="token punctuation">(</span>file.<span class="token function">readAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">void MainWindow::about()</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token property">QMessageBox</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">about</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span> <span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"About IDE"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    if <span class="token punctuation">(</span>file<span class="token number">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>ReadOnly | <span class="token property">QFile</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Text<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        editor-><span class="token function">setPlainText</span><span class="token punctuation">(</span>file<span class="token number">.</span><span class="token function">readAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">about</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">QMessageBox</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">about</span><span class="token punctuation">(</span>this, <span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"About IDE"</span><span class="token punctuation">)</span>,
                 <span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"version0.0.1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
 
 
-<span class="token selector">void MainWindow::setupHelpMenu()</span>
-<span class="token punctuation">&#123;</span>
-    QMenu *helpMenu = new <span class="token function">QMenu</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"&amp;Help"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">setupHelpMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    QMenu *helpMenu = new <span class="token function">QMenu</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"&amp;Help"</span><span class="token punctuation">)</span>, this<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">menuBar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>-><span class="token function">addMenu</span><span class="token punctuation">(</span>helpMenu<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    helpMenu-><span class="token function">addAction</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"&amp;About"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> this<span class="token punctuation">,</span> <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">about</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+    helpMenu-><span class="token function">addAction</span><span class="token punctuation">(</span><span class="token function">tr</span><span class="token punctuation">(</span><span class="token string">"&amp;About"</span><span class="token punctuation">)</span>, this, <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">about</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
 
-<span class="token selector">void MainWindow::precomp()//预编译</span>
-<span class="token punctuation">&#123;</span>
-    FILE *p = <span class="token function">fopen</span><span class="token punctuation">(</span>fileName.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">precomp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>//预编译
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    FILE *p = <span class="token function">fopen</span><span class="token punctuation">(</span>fileName<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>,<span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">if</span><span class="token punctuation">(</span>p == NULL<span class="token punctuation">)</span> return <span class="token punctuation">;</span>
     QString cmd = fileName +<span class="token string">".c"</span><span class="token punctuation">;</span>
-    FILE *p1 = <span class="token function">fopen</span><span class="token punctuation">(</span>cmd.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">if</span><span class="token punctuation">(</span>p1 == NULL<span class="token punctuation">)</span> return <span class="token punctuation">;</span>
-    QString str<span class="token selector">;
-    while(!feof(p))</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token selector">char buf[1024] =</span> <span class="token punctuation">&#123;</span>0<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-        <span class="token function">fgets</span><span class="token punctuation">(</span>buf<span class="token punctuation">,</span><span class="token function">sizeof</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">,</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    FILE *p<span class="token number">1</span> = <span class="token function">fopen</span><span class="token punctuation">(</span>cmd<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>,<span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">if</span><span class="token punctuation">(</span>p<span class="token number">1</span> == NULL<span class="token punctuation">)</span> return <span class="token punctuation">;</span>
+    QString str<span class="token punctuation">;</span>
+    <span class="token function">while</span><span class="token punctuation">(</span>!<span class="token function">feof</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+        char buf[<span class="token number">1024</span>] = &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token number">0</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token function">fgets</span><span class="token punctuation">(</span>buf,<span class="token function">sizeof</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span>,p<span class="token punctuation">)</span><span class="token punctuation">;</span>
         str += buf<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"包含"</span><span class="token punctuation">,</span><span class="token string">"#include"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"主函数"</span><span class="token punctuation">,</span><span class="token string">"main"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"整数"</span><span class="token punctuation">,</span><span class="token string">"int"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token selector">"开始","</span><span class="token punctuation">&#123;</span>"<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"收工"</span><span class="token punctuation">,</span><span class="token string">"&#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"。"</span><span class="token punctuation">,</span><span class="token string">";"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"返回"</span><span class="token punctuation">,</span><span class="token string">"return"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"打印"</span><span class="token punctuation">,</span><span class="token string">"printf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"输入输出"</span><span class="token punctuation">,</span><span class="token string">"&lt;stdio.h>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    str.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"无声的等待..."</span><span class="token punctuation">,</span><span class="token string">"getchar()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"包含"</span>,<span class="token string">"#include"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"主函数"</span>,<span class="token string">"main"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"整数"</span>,<span class="token string">"int"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"开始"</span>,<span class="token string">"&amp;#123;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"收工"</span>,<span class="token string">"&amp;#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"。"</span>,<span class="token string">";"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"返回"</span>,<span class="token string">"return"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"打印"</span>,<span class="token string">"printf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"输入输出"</span>,<span class="token string">"&lt;stdio.h>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    str<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"无声的等待..."</span>,<span class="token string">"getchar()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token function">fputs</span><span class="token punctuation">(</span>str.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">fputs</span><span class="token punctuation">(</span>str<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>,p<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">fclose</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">fclose</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+    <span class="token function">fclose</span><span class="token punctuation">(</span>p<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">//程序退出
-void MainWindow::on_exit()</span>
-<span class="token punctuation">&#123;</span>
+//程序退出
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     this -><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">//保存文件
-void MainWindow::on_save()</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token selector">if(fileName.isEmpty())</span>
-    <span class="token punctuation">&#123;</span>
-        fileName = <span class="token property">QFileDialog</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">getSaveFileName</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span><span class="token string">"保存文件"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">if(!fileName.isEmpty())</span>
-    <span class="token punctuation">&#123;</span>
-        FILE *p = <span class="token function">fopen</span><span class="token punctuation">(</span>fileName.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+//保存文件
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token function">if</span><span class="token punctuation">(</span>fileName<span class="token number">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+        fileName = <span class="token property">QFileDialog</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">getSaveFileName</span><span class="token punctuation">(</span>this,<span class="token string">"保存文件"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+    <span class="token function">if</span><span class="token punctuation">(</span>!fileName<span class="token number">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+        FILE *p = <span class="token function">fopen</span><span class="token punctuation">(</span>fileName<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>,<span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">if</span><span class="token punctuation">(</span>p == NULL<span class="token punctuation">)</span> return <span class="token punctuation">;</span>
         QString str = editor-><span class="token function">toPlainText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">fputs</span><span class="token punctuation">(</span>str.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">fputs</span><span class="token punctuation">(</span>str<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>,p<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">fclose</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">//新建文件
-void MainWindow::on_new()</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token selector">if(is_changed == true)</span>
-    <span class="token punctuation">&#123;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+//新建文件
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token function">if</span><span class="token punctuation">(</span>is_changed == true<span class="token punctuation">)</span>
+    &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
         on_<span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         is_changed = false<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
     fileName = <span class="token string">""</span><span class="token punctuation">;</span>
     editor-><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">//IDE的复制功能
-void MainWindow::on_copy()</span>
-<span class="token punctuation">&#123;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+//IDE的复制功能
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     editor-><span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::on_paste()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">paste</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     editor-><span class="token function">paste</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::on_cut()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">cut</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     editor-><span class="token function">cut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::on_allselect()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">allselect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     editor-><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::on_changed()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">changed</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     is_changed = true<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">//编译并运行按钮
-void MainWindow::on_comp()</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token selector">if (is_changed == true)//在点击编译按钮，如果文本内容发生变化，就自动保存</span>
-    <span class="token punctuation">&#123;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+//编译并运行按钮
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">comp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    if <span class="token punctuation">(</span>is_changed == true<span class="token punctuation">)</span>//在点击编译按钮，如果文本内容发生变化，就自动保存
+    &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
         on_<span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
     <span class="token function">precomp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//自动以预编译
     QString cmd<span class="token punctuation">;</span>
-    const char *s = fileName.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cmd.<span class="token function">sprintf</span><span class="token punctuation">(</span><span class="token string">"gcc -o %s.exe %s.c"</span><span class="token punctuation">,</span>s<span class="token punctuation">,</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span>cmd.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//先编译
+    const char *s = fileName<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cmd<span class="token number">.</span><span class="token function">sprintf</span><span class="token punctuation">(</span><span class="token string">"gcc -o %s.exe %s.c"</span>,s,s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span>cmd<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//先编译
 
     //如何删除那个临时文件呢
-    cmd = fileName.<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">,</span><span class="token string">"\\"</span><span class="token punctuation">)</span> + <span class="token string">".c"</span><span class="token punctuation">;</span>
-    <span class="token function">remove</span><span class="token punctuation">(</span>cmd.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cmd = fileName<span class="token number">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"/"</span>,<span class="token string">"\\"</span><span class="token punctuation">)</span> + <span class="token string">".c"</span><span class="token punctuation">;</span>
+    <span class="token function">remove</span><span class="token punctuation">(</span>cmd<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
     cmd = fileName + <span class="token string">".exe"</span><span class="token punctuation">;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span>cmd.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//再运行
-<span class="token punctuation">&#125;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span>cmd<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//再运行
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void MainWindow::on_run()</span>
-<span class="token punctuation">&#123;</span>
+void <span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span>on_<span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     QString cmd<span class="token punctuation">;</span>
     cmd = fileName + <span class="token string">".exe"</span><span class="token punctuation">;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span>cmd.<span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span>cmd<span class="token number">.</span><span class="token function">toStdString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="添加浮动窗口"><a href="#添加浮动窗口" class="headerlink" title="添加浮动窗口"></a>添加浮动窗口</h3><p>在<code>mainwindows.cpp</code>里修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)</span>
-<span class="token punctuation">&#123;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent<span class="token punctuation">)</span>
+    <span class="token punctuation">:</span> <span class="token function">QMainWindow</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在这里面添加浮动窗口</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)</span>
-<span class="token punctuation">&#123;</span>
-	....#省略前面的代码
-	<span class="token function">connect</span><span class="token punctuation">(</span>run_comp<span class="token punctuation">,</span><span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">MainWindow</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget *parent<span class="token punctuation">)</span>
+    <span class="token punctuation">:</span> <span class="token function">QMainWindow</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token number">....</span>#省略前面的代码
+    <span class="token function">connect</span><span class="token punctuation">(</span>run_comp,<span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">triggered</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>,this,<span class="token function">SLOT</span><span class="token punctuation">(</span>on_<span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//当文本内容发生变化时，触发on_changed函数
 #在上一行代码后添加如下内容    
     //浮动窗口---------------------------------------------------------------------
     QDockWidget *dock = new <span class="token function">QDockWidget</span><span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">addDockWidget</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>RightDockWidgetArea<span class="token punctuation">,</span> dock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">addDockWidget</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>RightDockWidgetArea, dock<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     //给浮动窗口添加控件
       QTreeView *treeView = new <span class="token function">QTreeView</span><span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
       dock-><span class="token function">setWidget</span><span class="token punctuation">(</span>treeView<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="给代码添加高亮"><a href="#给代码添加高亮" class="headerlink" title="给代码添加高亮"></a>给代码添加高亮</h3><p>在文件上右键选择<code>add new...</code><br><img src="https://s1.ax1x.com/2020/04/22/JtQkkT.png" alt="图2"></p>
 <p><img src="https://s1.ax1x.com/2020/04/22/Jtl0M9.png" alt="图3"></p>
 <p>将<code>class name</code>命名为<code>highlighter</code><br>将<code>.pro</code>文件修改</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">QT += widgets
+<pre class="line-numbers language-css"><code class="language-css">QT += widgets
 <span class="token function">requires</span><span class="token punctuation">(</span><span class="token function">qtConfig</span><span class="token punctuation">(</span>filedialog<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-HEADERS         = highlighter.h \
-                  mainwindow.h
-SOURCES         = highlighter.cpp \
-                  mainwindow.cpp \
-                  main.cpp
+HEADERS         = highlighter<span class="token number">.</span>h \
+                  mainwindow<span class="token number">.</span>h
+SOURCES         = highlighter<span class="token number">.</span>cpp \
+                  mainwindow<span class="token number">.</span>cpp \
+                  main<span class="token number">.</span>cpp
 
 # install
-target.path = $$[QT_INSTALL_EXAMPLES]/widgets/richtext/syntaxhighlighter
+target<span class="token number">.</span>path = $$[QT_INSTALL_EXAMPLES]/widgets/richtext/syntaxhighlighter
 INSTALLS += target
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>将<code>highlighter.h</code>的代码修改为</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
+<pre class="line-numbers language-css"><code class="language-css">
 #ifndef HIGHLIGHTER_H
-#define HIGHLIGHTER_H
+<span class="token hexcode">#def</span>ine HIGHLIGHTER_H
 
 #include &lt;QSyntaxHighlighter>
 #include &lt;QTextCharFormat>
 #include &lt;QRegularExpression>
 
 QT_BEGIN_NAMESPACE
-class QTextDocument<span class="token selector">;
+class QTextDocument<span class="token punctuation">;</span>
 QT_END_NAMESPACE
 
 
-class Highlighter : public QSyntaxHighlighter</span>
-<span class="token punctuation">&#123;</span>
+class <span class="token property">Highlighter</span> <span class="token punctuation">:</span> public QSyntaxHighlighter
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     Q_OBJECT
 
 <span class="token property">public</span><span class="token punctuation">:</span>
-    <span class="token function">Highlighter</span><span class="token punctuation">(</span>QTextDocument *parent = 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">Highlighter</span><span class="token punctuation">(</span>QTextDocument *parent = <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token property">protected</span><span class="token punctuation">:</span>
-    void <span class="token function">highlightBlock</span><span class="token punctuation">(</span>const QString &amp;text<span class="token punctuation">)</span> override<span class="token selector">;
+    void <span class="token function">highlightBlock</span><span class="token punctuation">(</span>const QString &amp;text<span class="token punctuation">)</span> override<span class="token punctuation">;</span>
 
-private:
-    struct HighlightingRule</span>
-    <span class="token punctuation">&#123;</span>
+<span class="token property">private</span><span class="token punctuation">:</span>
+    struct HighlightingRule
+    &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
         QRegularExpression pattern<span class="token punctuation">;</span>
         QTextCharFormat format<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
     QVector&lt;HighlightingRule> highlightingRules<span class="token punctuation">;</span>
 
     QRegularExpression commentStartExpression<span class="token punctuation">;</span>
@@ -943,23 +936,23 @@ private:
     QTextCharFormat multiLineCommentFormat<span class="token punctuation">;</span>
     QTextCharFormat quotationFormat<span class="token punctuation">;</span>
     QTextCharFormat functionFormat<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
 
 
 #endif // HIGHLIGHTER_H
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>将<code>highlighter.cpp</code>里的代码修改为</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">
-<span class="token selector">#include "highlighter.h"
+<pre class="line-numbers language-css"><code class="language-css">
+#include <span class="token string">"highlighter.h"</span>
 
 
-Highlighter::Highlighter(QTextDocument *parent)
-    : QSyntaxHighlighter(parent)</span>
-<span class="token punctuation">&#123;</span>
+<span class="token property">Highlighter</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">Highlighter</span><span class="token punctuation">(</span>QTextDocument *parent<span class="token punctuation">)</span>
+    <span class="token punctuation">:</span> <span class="token function">QSyntaxHighlighter</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     HighlightingRule rule<span class="token punctuation">;</span>
 
-    keywordFormat.<span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>darkBlue<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    keywordFormat.<span class="token function">setFontWeight</span><span class="token punctuation">(</span><span class="token property">QFont</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Bold<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    keywordFormat<span class="token number">.</span><span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>darkBlue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    keywordFormat<span class="token number">.</span><span class="token function">setFontWeight</span><span class="token punctuation">(</span><span class="token property">QFont</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Bold<span class="token punctuation">)</span><span class="token punctuation">;</span>
     QStringList keywordPatterns<span class="token punctuation">;</span>
     keywordPatterns &lt;&lt; <span class="token string">"\\bchar\\b"</span> &lt;&lt; <span class="token string">"\\bclass\\b"</span> &lt;&lt; <span class="token string">"\\bconst\\b"</span>
                     &lt;&lt; <span class="token string">"\\bdouble\\b"</span> &lt;&lt; <span class="token string">"\\benum\\b"</span> &lt;&lt; <span class="token string">"\\bexplicit\\b"</span>
@@ -970,83 +963,83 @@ Highlighter::Highlighter(QTextDocument *parent)
                     &lt;&lt; <span class="token string">"\\bslots\\b"</span> &lt;&lt; <span class="token string">"\\bstatic\\b"</span> &lt;&lt; <span class="token string">"\\bstruct\\b"</span>
                     &lt;&lt; <span class="token string">"\\btemplate\\b"</span> &lt;&lt; <span class="token string">"\\btypedef\\b"</span> &lt;&lt; <span class="token string">"\\btypename\\b"</span>
                     &lt;&lt; <span class="token string">"\\bunion\\b"</span> &lt;&lt; <span class="token string">"\\bunsigned\\b"</span> &lt;&lt; <span class="token string">"\\bvirtual\\b"</span>
-                    &lt;&lt; <span class="token string">"\\bvoid\\b"</span> &lt;&lt; <span class="token string">"\\bvolatile\\b"</span> &lt;&lt; <span class="token string">"\\bbool\\b"</span><span class="token selector">;
-    foreach (const QString &amp;pattern, keywordPatterns)</span> <span class="token punctuation">&#123;</span>
-        rule.pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span>pattern<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        rule.format = keywordFormat<span class="token punctuation">;</span>
-        highlightingRules.<span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    &lt;&lt; <span class="token string">"\\bvoid\\b"</span> &lt;&lt; <span class="token string">"\\bvolatile\\b"</span> &lt;&lt; <span class="token string">"\\bbool\\b"</span><span class="token punctuation">;</span>
+    foreach <span class="token punctuation">(</span>const QString &amp;pattern, keywordPatterns<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+        rule<span class="token number">.</span>pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span>pattern<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        rule<span class="token number">.</span>format = keywordFormat<span class="token punctuation">;</span>
+        highlightingRules<span class="token number">.</span><span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token punctuation">&#125;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-    classFormat.<span class="token function">setFontWeight</span><span class="token punctuation">(</span><span class="token property">QFont</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Bold<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    classFormat.<span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>darkMagenta<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\\bQ[A-Za-z]+\\b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.format = classFormat<span class="token punctuation">;</span>
-    highlightingRules.<span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    classFormat<span class="token number">.</span><span class="token function">setFontWeight</span><span class="token punctuation">(</span><span class="token property">QFont</span><span class="token punctuation">:</span><span class="token punctuation">:</span>Bold<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    classFormat<span class="token number">.</span><span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>darkMagenta<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\\bQ[A-Za-z]+\\b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>format = classFormat<span class="token punctuation">;</span>
+    highlightingRules<span class="token number">.</span><span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    singleLineCommentFormat.<span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>red<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"//[^\n]*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.format = singleLineCommentFormat<span class="token punctuation">;</span>
-    highlightingRules.<span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    singleLineCommentFormat<span class="token number">.</span><span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"//[^\n]*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>format = singleLineCommentFormat<span class="token punctuation">;</span>
+    highlightingRules<span class="token number">.</span><span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    multiLineCommentFormat.<span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    multiLineCommentFormat<span class="token number">.</span><span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>red<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    quotationFormat.<span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>darkGreen<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\".*\""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.format = quotationFormat<span class="token punctuation">;</span>
-    highlightingRules.<span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    quotationFormat<span class="token number">.</span><span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>darkGreen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\".*\""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>format = quotationFormat<span class="token punctuation">;</span>
+    highlightingRules<span class="token number">.</span><span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    functionFormat.<span class="token function">setFontItalic</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    functionFormat.<span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\\b[A-Za-z0-9_]+(?=\\()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    rule.format = functionFormat<span class="token punctuation">;</span>
-    highlightingRules.<span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    functionFormat<span class="token number">.</span><span class="token function">setFontItalic</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    functionFormat<span class="token number">.</span><span class="token function">setForeground</span><span class="token punctuation">(</span><span class="token property">Qt</span><span class="token punctuation">:</span><span class="token punctuation">:</span>blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>pattern = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\\b[A-Za-z0-9_]+(?=\\()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rule<span class="token number">.</span>format = functionFormat<span class="token punctuation">;</span>
+    highlightingRules<span class="token number">.</span><span class="token function">append</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     commentStartExpression = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"/\\*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     commentEndExpression = <span class="token function">QRegularExpression</span><span class="token punctuation">(</span><span class="token string">"\\*/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-<span class="token selector">void Highlighter::highlightBlock(const QString &amp;text)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token selector">foreach (const HighlightingRule &amp;rule, highlightingRules)</span> <span class="token punctuation">&#123;</span>
-        QRegularExpressionMatchIterator matchIterator = rule.pattern.<span class="token function">globalMatch</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token selector">;
-        while (matchIterator.hasNext())</span> <span class="token punctuation">&#123;</span>
-            QRegularExpressionMatch match = matchIterator.<span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">setFormat</span><span class="token punctuation">(</span>match.<span class="token function">capturedStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> match.<span class="token function">capturedLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rule.format<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
+void <span class="token property">Highlighter</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">highlightBlock</span><span class="token punctuation">(</span>const QString &amp;text<span class="token punctuation">)</span>
+&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    foreach <span class="token punctuation">(</span>const HighlightingRule &amp;rule, highlightingRules<span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+        QRegularExpressionMatchIterator matchIterator = rule<span class="token number">.</span>pattern<span class="token number">.</span><span class="token function">globalMatch</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        while <span class="token punctuation">(</span>matchIterator<span class="token number">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            QRegularExpressionMatch match = matchIterator<span class="token number">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setFormat</span><span class="token punctuation">(</span>match<span class="token number">.</span><span class="token function">capturedStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span>, match<span class="token number">.</span><span class="token function">capturedLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span>, rule<span class="token number">.</span>format<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
-    <span class="token function">setCurrentBlockState</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setCurrentBlockState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    int startIndex = 0<span class="token punctuation">;</span>
-    if <span class="token punctuation">(</span><span class="token function">previousBlockState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> != 1<span class="token punctuation">)</span>
-        startIndex = text.<span class="token function">indexOf</span><span class="token punctuation">(</span>commentStartExpression<span class="token punctuation">)</span><span class="token selector">;
+    int startIndex = <span class="token number">0</span><span class="token punctuation">;</span>
+    if <span class="token punctuation">(</span><span class="token function">previousBlockState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> != <span class="token number">1</span><span class="token punctuation">)</span>
+        startIndex = text<span class="token number">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>commentStartExpression<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
-    while (startIndex >= 0)</span> <span class="token punctuation">&#123;</span>
+    while <span class="token punctuation">(</span>startIndex >= <span class="token number">0</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
 
-        QRegularExpressionMatch match = commentEndExpression.<span class="token function">match</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> startIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        int endIndex = match.<span class="token function">capturedStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        int commentLength = 0<span class="token selector">;
-        if (endIndex == -1)</span> <span class="token punctuation">&#123;</span>
-            <span class="token function">setCurrentBlockState</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            commentLength = text.<span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> - startIndex<span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token selector">else</span> <span class="token punctuation">&#123;</span>
+        QRegularExpressionMatch match = commentEndExpression<span class="token number">.</span><span class="token function">match</span><span class="token punctuation">(</span>text, startIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        int endIndex = match<span class="token number">.</span><span class="token function">capturedStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        int commentLength = <span class="token number">0</span><span class="token punctuation">;</span>
+        if <span class="token punctuation">(</span>endIndex == -<span class="token number">1</span><span class="token punctuation">)</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token function">setCurrentBlockState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            commentLength = text<span class="token number">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> - startIndex<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span> else &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
             commentLength = endIndex - startIndex
-                            + match.<span class="token function">capturedLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token function">setFormat</span><span class="token punctuation">(</span>startIndex<span class="token punctuation">,</span> commentLength<span class="token punctuation">,</span> multiLineCommentFormat<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        startIndex = text.<span class="token function">indexOf</span><span class="token punctuation">(</span>commentStartExpression<span class="token punctuation">,</span> startIndex + commentLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
+                            + match<span class="token number">.</span><span class="token function">capturedLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token function">setFormat</span><span class="token punctuation">(</span>startIndex, commentLength, multiLineCommentFormat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        startIndex = text<span class="token number">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>commentStartExpression, startIndex + commentLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>mainwindow.h</code>里添加</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">//添加include文件
+<pre class="line-numbers language-css"><code class="language-css">//添加include文件
 
 #ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+<span class="token hexcode">#def</span>ine MAINWINDOW_H
 
 #include <span class="token string">"highlighter.h"</span>
 
@@ -1060,10 +1053,11 @@ Highlighter::Highlighter(QTextDocument *parent)
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>找到<code>private:</code>添加</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">Highlighter *highlighter<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css">    Highlighter *highlighter<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如图<br><img src="https://s1.ax1x.com/2020/04/22/Jt3mcQ.png" alt="图4"></p>
 <p>修改<code>mainwindow.cpp</code></p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">highlighter = new <span class="token function">Highlighter</span><span class="token punctuation">(</span>editor-><span class="token function">document</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-css"><code class="language-css"> highlighter = new <span class="token function">Highlighter</span><span class="token punctuation">(</span>editor-><span class="token function">document</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>位置如图<br><img src="https://s1.ax1x.com/2020/04/22/Jt8vsH.png" alt="图5"></p>
 
@@ -1848,7 +1842,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

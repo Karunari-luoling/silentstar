@@ -6,7 +6,7 @@
   <link href="https://silentstar.cn/atom.xml" rel="self"/>
   
   <link href="https://silentstar.cn/"/>
-  <updated>2021-02-01T07:03:37.698Z</updated>
+  <updated>2021-02-01T07:09:07.451Z</updated>
   <id>https://silentstar.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://silentstar.cn/posts/8c68042b.html"/>
     <id>https://silentstar.cn/posts/8c68042b.html</id>
     <published>2021-02-01T06:57:22.000Z</published>
-    <updated>2021-02-01T07:03:37.698Z</updated>
+    <updated>2021-02-01T07:09:07.451Z</updated>
     
     
       
@@ -47,7 +47,7 @@
     <link href="https://silentstar.cn/posts/210d2f66.html"/>
     <id>https://silentstar.cn/posts/210d2f66.html</id>
     <published>2021-02-01T02:19:58.000Z</published>
-    <updated>2021-02-01T07:08:50.827Z</updated>
+    <updated>2021-02-01T07:09:07.497Z</updated>
     
     
       
@@ -72,7 +72,7 @@
     <link href="https://silentstar.cn/posts/f4577764.html"/>
     <id>https://silentstar.cn/posts/f4577764.html</id>
     <published>2021-02-01T01:48:23.000Z</published>
-    <updated>2021-02-01T07:08:42.095Z</updated>
+    <updated>2021-02-01T07:09:07.471Z</updated>
     
     
       
@@ -97,7 +97,7 @@
     <link href="https://silentstar.cn/posts/457fcab1.html"/>
     <id>https://silentstar.cn/posts/457fcab1.html</id>
     <published>2021-01-31T13:56:50.000Z</published>
-    <updated>2021-02-01T03:19:04.632Z</updated>
+    <updated>2021-02-01T07:09:07.514Z</updated>
     
     
       
@@ -229,7 +229,7 @@
         
         
     <summary type="html">&lt;p&gt;在这章开始前我们先修改一下信息打开&lt;code&gt;build.gradle&lt;/code&gt;找到 &lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-java&quot; data-language=&quot;java&quot;&gt;&lt;code</summary>
+&lt;pre class=&quot;line-numbers language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;version &lt;span</summary>
         
       
     
@@ -401,7 +401,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;根目录结构&quot;&gt;&lt;a href=&quot;#根目录结构&quot; class=&quot;headerlink&quot; title=&quot;根目录结构&quot;&gt;&lt;/a&gt;根目录结构&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;根目录结构&quot;&gt;&lt;a href=&quot;#根目录结构&quot; class=&quot;headerlink&quot; title=&quot;根目录结构&quot;&gt;&lt;/a&gt;根目录结构&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code</summary>
         
       
     

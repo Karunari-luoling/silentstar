@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -468,35 +459,41 @@
 </tbody></table>
 <p>当一个程序使用 fork() 生成一个子进程后，子进程会继承父进程所打开的文件表，此时，父子进程使用同一个文件表，这可能导致一些安全问题。如果使用 vfork()，子进程虽然运行于父进程的空间，但拥有自己的进程表项。</p>
 <h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>• 使用命令的输出作为可执行文件的输入参数</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ./vulnerable <span class="token variable"><span class="token variable">`</span>your_command_here<span class="token variable">`</span></span> 或者
-$ ./vulnerable <span class="token variable"><span class="token variable">$(</span>your_command_here<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">$ ./vulnerable <span class="token variable"><span class="token variable">`</span>your_command_here<span class="token variable">`</span></span> 或者
+$ ./vulnerable <span class="token variable"><span class="token variable">$(</span>your_command_here<span class="token variable">)</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>• 使用命令作为输入</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ your_command_here <span class="token operator">|</span> ./vulnerable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">$ your_command_here <span class="token operator">|</span> ./vulnerable
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>• 将命令行输出写入文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ your_command_here <span class="token operator">></span> filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">$ your_command_here <span class="token operator">></span> filename
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>• 使用文件作为输入</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ./vulnerable <span class="token operator">&lt;</span> filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">$ ./vulnerable <span class="token operator">&lt;</span> filename
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="字节序"><a href="#字节序" class="headerlink" title="字节序"></a>字节序</h2><p>目前计算机中采用两种字节存储机制：大端（Big-endian）和小端（Little-endian）。<br><code>    MSB (Most Significan Bit/Byte)：最重要的位或最重要的字节。</code><br><code>    LSB (Least Significan Bit/Byte)：最不重要的位或最不重要的字节。</code><br>Big-endian 规定 MSB 在存储时放在低地址，在传输时放在流的开始；LSB 存储时放在高地址，在传输时放在流的末尾。Little-endian 则相反。常见的 Intel 处理器使用 Little-endian，而 PowerPC 系列处理器则使用 Big-endian，另外 TCP/IP 协议和 Java 虚拟机的字节序也是 Big-endian。<br>例如十六进制整数 0x12345678 存入以 1000H 开始的内存中：<br><img src="https://s1.ax1x.com/2020/06/25/NBD9je.png" alt="图片"><br><code>图片来自firmianay</code><br>我们在内存中实际地看一下，在地址<code>0xffffd584</code> 处有字符<code>1234</code>，在地址<code>0xffffd588</code>处有字符<code>5678</code>。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gdb-peda$ x/w 0xffffd584
+<pre class="line-numbers language-bash"><code class="language-bash">gdb-peda$ x/w 0xffffd584
 0xffffd584:     0x34333231
 gdb-peda$ x/4wb 0xffffd584
 0xffffd584:     0x31    0x32    0x33    0x34
-gdb-peda$ python print<span class="token punctuation">(</span><span class="token string">'<span class="token entity" title="\x31">\x31</span><span class="token entity" title="\x32">\x32</span><span class="token entity" title="\x33">\x33</span><span class="token entity" title="\x34">\x34</span>'</span><span class="token punctuation">)</span>
-<span class="token number">1234</span>
+gdb-peda$ python print<span class="token punctuation">(</span><span class="token string">'\x31\x32\x33\x34'</span><span class="token punctuation">)</span>
+1234
 gdb-peda$ x/w 0xffffd588
 0xffffd588:     0x38373635
 gdb-peda$ x/4wb 0xffffd588
 0xffffd588:     0x35    0x36    0x37    0x38
-gdb-peda$ python print<span class="token punctuation">(</span><span class="token string">'<span class="token entity" title="\x35">\x35</span><span class="token entity" title="\x36">\x36</span><span class="token entity" title="\x37">\x37</span><span class="token entity" title="\x38">\x38</span>'</span><span class="token punctuation">)</span>
-<span class="token number">5678</span>
+gdb-peda$ python print<span class="token punctuation">(</span><span class="token string">'\x35\x36\x37\x38'</span><span class="token punctuation">)</span>
+5678
 gdb-peda$ x/2w 0xffffd584
 0xffffd584:     0x34333231      0x38373635
 gdb-peda$ x/8wb 0xffffd584
 0xffffd584:     0x31    0x32    0x33    0x34    0x35    0x36    0x37    0x38
-gdb-peda$ python print<span class="token punctuation">(</span><span class="token string">'<span class="token entity" title="\x31">\x31</span><span class="token entity" title="\x32">\x32</span><span class="token entity" title="\x33">\x33</span><span class="token entity" title="\x34">\x34</span><span class="token entity" title="\x35">\x35</span><span class="token entity" title="\x35">\x35</span><span class="token entity" title="\x36">\x36</span><span class="token entity" title="\x37">\x37</span><span class="token entity" title="\x38">\x38</span>'</span><span class="token punctuation">)</span>
-<span class="token number">123455678</span>
+gdb-peda$ python print<span class="token punctuation">(</span><span class="token string">'\x31\x32\x33\x34\x35\x35\x36\x37\x38'</span><span class="token punctuation">)</span>
+123455678
 db-peda$ x/s 0xffffd584
-0xffffd584:     <span class="token string">"12345678"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+0xffffd584:     <span class="token string">"12345678"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
             </div>
             <hr/>
 
@@ -1269,7 +1266,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

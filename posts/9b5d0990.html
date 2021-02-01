@@ -30,18 +30,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
 
 
 
@@ -431,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    901
+                    921
                 </div>
                 
 
@@ -454,11 +445,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>在这章开始前我们先修改一下信息打开<code>build.gradle</code>找到 </p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">version <span class="token operator">=</span> <span class="token string">"1.0"</span>
+<pre class="line-numbers language-java"><code class="language-java">version <span class="token operator">=</span> <span class="token string">"1.0"</span>
 
 group <span class="token operator">=</span> <span class="token string">"com.yourname.modid"</span>
 
-archivesBaseName <span class="token operator">=</span> <span class="token string">"modid"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+archivesBaseName <span class="token operator">=</span> <span class="token string">"modid"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><p><strong>version = ‘1.0’</strong> ：模组的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%89%88%E6%9C%AC%E5%8F%B7/7674145?fr=aladdin">版本号</a>（版本的标识号，<a target="_blank" rel="noopener" href="https://cwiki.apache.org/confluence/display/MAVENOLD/Versioning">Maven的版本号规则</a>，<a target="_blank" rel="noopener" href="https://semver.org/lang/zh-CN/">语义化版本</a>）。</p>
 </li>
@@ -491,62 +483,64 @@ archivesBaseName <span class="token operator">=</span> <span class="token string
 <p><strong><em>（除了模组的本地化外都不要写中文与特殊字符）</em></strong></p>
 </blockquote>
 <p>修改为</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">version <span class="token operator">=</span> <span class="token string">"1.0"</span>
+<pre class="line-numbers language-java"><code class="language-java">version <span class="token operator">=</span> <span class="token string">"1.0"</span>
 
 group <span class="token operator">=</span> <span class="token string">"com.wzhrdx.xenoage"</span>
 
-archivesBaseName <span class="token operator">=</span> <span class="token string">"xenoage"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+archivesBaseName <span class="token operator">=</span> <span class="token string">"xenoage"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在这篇教程里我将哪出我写的模组的一部分进行讲解</p>
 <p>那么废话不多说，我们开始正题，本人使用的是IDEA</p>
 <h1 id="新建一个主类"><a href="#新建一个主类" class="headerlink" title="新建一个主类"></a>新建一个主类</h1><p>这里我们直接双击<code>ipr</code>文件，然后IDEA就会导入工程了，这里在<code>scr/main/java/</code>下新建一个包<code>com.wzrdx.XenoAge</code></p>
 <p>然后创建一个java类<code>XenoAge</code>,代码如下</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span></span><span class="token class-name">XenoAge</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>wzhrdx<span class="token punctuation">.</span>XenoAge<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>init<span class="token punctuation">.</span></span><span class="token class-name">Blocks</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraft<span class="token punctuation">.</span>init<span class="token punctuation">.</span>Blocks<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span></span><span class="token class-name">Mod</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>Mod<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">FMLInitializationEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>event<span class="token punctuation">.</span>FMLInitializationEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">FMLPreInitializationEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> net<span class="token punctuation">.</span>minecraftforge<span class="token punctuation">.</span>fml<span class="token punctuation">.</span>common<span class="token punctuation">.</span>event<span class="token punctuation">.</span>FMLPreInitializationEvent<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>logging<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span></span><span class="token class-name">Logger</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>logging<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>
 
-<span class="token annotation punctuation">@Mod</span><span class="token punctuation">(</span>modid <span class="token operator">=</span> <span class="token class-name">XenoAge</span><span class="token punctuation">.</span>MODID<span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token class-name">XenoAge</span><span class="token punctuation">.</span>NAME<span class="token punctuation">,</span> version <span class="token operator">=</span> <span class="token class-name">XenoAge</span><span class="token punctuation">.</span>VERSION<span class="token punctuation">,</span> acceptedMinecraftVersions <span class="token operator">=</span> <span class="token string">"1.12.2"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Mod</span><span class="token punctuation">(</span>modid <span class="token operator">=</span> XenoAge<span class="token punctuation">.</span>MODID<span class="token punctuation">,</span> name <span class="token operator">=</span> XenoAge<span class="token punctuation">.</span>NAME<span class="token punctuation">,</span> version <span class="token operator">=</span> XenoAge<span class="token punctuation">.</span>VERSION<span class="token punctuation">,</span> acceptedMinecraftVersions <span class="token operator">=</span> <span class="token string">"1.12.2"</span><span class="token punctuation">)</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">XenoAge</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">XenoAge</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> MODID <span class="token operator">=</span> <span class="token string">"xenoage"</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> String MODID <span class="token operator">=</span> <span class="token string">"xenoage"</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> NAME <span class="token operator">=</span> <span class="token string">"Xeno Age"</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> String NAME <span class="token operator">=</span> <span class="token string">"Xeno Age"</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> VERSION <span class="token operator">=</span> <span class="token string">"1.0.0"</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> String VERSION <span class="token operator">=</span> <span class="token string">"1.0.0"</span><span class="token punctuation">;</span>
 
-<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Logger</span> logger<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> Logger logger<span class="token punctuation">;</span>
 
-<span class="token annotation punctuation">@Mod.EventHandler</span>
+<span class="token annotation punctuation">@Mod</span><span class="token punctuation">.</span>EventHandler
 
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">preInit</span><span class="token punctuation">(</span><span class="token class-name">FMLPreInitializationEvent</span> event<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">preInit</span><span class="token punctuation">(</span>FMLPreInitializationEvent event<span class="token punctuation">)</span>
 
-<span class="token punctuation">&#123;</span>
+<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
 logger <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getModLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token annotation punctuation">@Mod.EventHandler</span>
+<span class="token annotation punctuation">@Mod</span><span class="token punctuation">.</span>EventHandler
 
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">FMLInitializationEvent</span> event<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span>FMLInitializationEvent event<span class="token punctuation">)</span>
 
-<span class="token punctuation">&#123;</span>
+<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
-<span class="token comment">// some example code</span>
+<span class="token comment" spellcheck="true">// some example code</span>
 
-logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"DIRT BLOCK >> &#123;&#125;"</span><span class="token punctuation">,</span> <span class="token class-name">Blocks</span><span class="token punctuation">.</span>DIRT<span class="token punctuation">.</span><span class="token function">getRegistryName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"DIRT BLOCK >> &amp;#123;&amp;#125;"</span><span class="token punctuation">,</span> Blocks<span class="token punctuation">.</span>DIRT<span class="token punctuation">.</span><span class="token function">getRegistryName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><p>@Mod(modid = “XenoAge”,name = “XenoAge”,version=”1.0”)//modid是Mod的唯一标识符（ID）,name是Mod的名称,version是Mod的版本</p>
 </li>
@@ -567,9 +561,9 @@ logger<span class="token punctuation">.</span><span class="token function">info<
 </ul>
 <p>这样我们就完成第一步了</p>
 <h1 id="完善你的mod信息"><a href="#完善你的mod信息" class="headerlink" title="完善你的mod信息"></a>完善你的mod信息</h1><p>打开<code>src/main/resources/mcmod.info</code></p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">[</span>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">[</span>
 
-<span class="token punctuation">&#123;</span>
+&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
 
 <span class="token property">"modid"</span><span class="token operator">:</span> <span class="token string">"examplemod"</span><span class="token punctuation">,</span>
 
@@ -577,9 +571,9 @@ logger<span class="token punctuation">.</span><span class="token function">info<
 
 <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Example placeholder mod."</span><span class="token punctuation">,</span>
 
-<span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"$&#123;version&#125;"</span><span class="token punctuation">,</span>
+<span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"$&amp;#123;version&amp;#125;"</span><span class="token punctuation">,</span>
 
-<span class="token property">"mcversion"</span><span class="token operator">:</span> <span class="token string">"$&#123;mcversion&#125;"</span><span class="token punctuation">,</span>
+<span class="token property">"mcversion"</span><span class="token operator">:</span> <span class="token string">"$&amp;#123;mcversion&amp;#125;"</span><span class="token punctuation">,</span>
 
 <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
 
@@ -595,13 +589,14 @@ logger<span class="token punctuation">.</span><span class="token function">info<
 
 <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-<span class="token punctuation">&#125;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改如下</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">[</span>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">[</span>
 
-<span class="token punctuation">&#123;</span>
+&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
 
 <span class="token property">"modid"</span><span class="token operator">:</span> <span class="token string">"xenoage"</span><span class="token punctuation">,</span>
 
@@ -609,9 +604,9 @@ logger<span class="token punctuation">.</span><span class="token function">info<
 
 <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"It's a 1.12.2 mod"</span><span class="token punctuation">,</span>
 
-<span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"$&#123;version&#125;"</span><span class="token punctuation">,</span>
+<span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"$&amp;#123;version&amp;#125;"</span><span class="token punctuation">,</span>
 
-<span class="token property">"mcversion"</span><span class="token operator">:</span> <span class="token string">"$&#123;mcversion&#125;"</span><span class="token punctuation">,</span>
+<span class="token property">"mcversion"</span><span class="token operator">:</span> <span class="token string">"$&amp;#123;mcversion&amp;#125;"</span><span class="token punctuation">,</span>
 
 <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
 
@@ -627,9 +622,10 @@ logger<span class="token punctuation">.</span><span class="token function">info<
 
 <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-<span class="token punctuation">&#125;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr/>
@@ -1439,7 +1435,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             
