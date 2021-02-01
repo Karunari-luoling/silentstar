@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Logon failed, use ctrl+c to cancel basic credential prompt解决办法, Ψ寂ω星Ψ">
+    <meta name="keywords" content="npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js, Ψ寂ω星Ψ">
     <meta name="description" content="ε≡≡ﾍ( ´Д`)ﾉ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Logon failed, use ctrl+c to cancel basic credential prompt解决办法 | Ψ寂ω星Ψ</title>
+    <title>npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js | Ψ寂ω星Ψ</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Logon failed, use ctrl+c to cancel basic credential prompt解决办法</h1>
+                    <h1 class="description center-align post-title">npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js</h1>
                 </div>
             </div>
         </div>
@@ -380,8 +380,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
+                            <a href="/tags/npm/">
+                                <span class="chip bg-color">npm</span>
                             </a>
                         
                     </div>
@@ -392,8 +392,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category">
-                                git
+                            <a href="/categories/npm/" class="post-category">
+                                npm
                             </a>
                         
                     </div>
@@ -405,7 +405,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-31
+                    2021-02-01
                 </div>
                 
 
@@ -419,7 +419,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    204
+                    195
                 </div>
                 
 
@@ -441,11 +441,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法"><a href="#Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法" class="headerlink" title="Logon failed, use ctrl+c to cancel basic credential prompt解决办法"></a>Logon failed, use ctrl+c to cancel basic credential prompt解决办法</h1><p>使用<code>power shell</code>推送时，在弹出框中输入github用户名和密码，但是推送失败，提示Logon failed, use ctrl+c to cancel basic credential prompt.<br>而使用<code>git bash</code>推送时在弹出框中输入github用户名和密码后重新弹出输入框，重新输入后推送成功。<br>原因：新版的GIT不再支持弹出框验证用户名密码的方式，所以推送请求被拒绝了。</p>
-<h3 id="解决办法1"><a href="#解决办法1" class="headerlink" title="解决办法1"></a>解决办法1</h3><p>重新去<code>git</code>官网下载<code>git bash</code> 安装好后重新推送，输入密码之后推送成功。</p>
-<h3 id="解决办法2"><a href="#解决办法2" class="headerlink" title="解决办法2"></a>解决办法2</h3><p>这里有详细教程，我还没有进行尝试<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/steamed-twisted-roll/p/14155092.html">https://www.cnblogs.com/steamed-twisted-roll/p/14155092.html</a></p>
-<p>但是根据的我的猜测，在<code>power shell</code>中应该是行不通的</p>
+                <h2 id="QA"><a href="#QA" class="headerlink" title="QA!"></a>QA!</h2><p>由于布置不知道哪一步错了，所以他就报错了，经过我的不懈终于解决<br>错误如下</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
 
+<span class="token operator">></span> ejs@2.7.4 postinstall /root/blog/node_modules/ejs
+<span class="token operator">></span> node ./postinstall.js
+
+sh: <span class="token number">1</span>: node: Permission denied
+<span class="token function">npm</span> WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 <span class="token punctuation">(</span>node_modules/chokidar/node_modules/fsevents<span class="token punctuation">)</span>:
+<span class="token function">npm</span> WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="token keyword">for</span> fsevents@2.1.3: wanted <span class="token punctuation">&#123;</span><span class="token string">"os"</span><span class="token builtin class-name">:</span><span class="token string">"darwin"</span>,<span class="token string">"arch"</span><span class="token builtin class-name">:</span><span class="token string">"any"</span><span class="token punctuation">&#125;</span> <span class="token punctuation">(</span>current: <span class="token punctuation">&#123;</span><span class="token string">"os"</span><span class="token builtin class-name">:</span><span class="token string">"linux"</span>,<span class="token string">"arch"</span><span class="token builtin class-name">:</span><span class="token string">"x64"</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> code ELIFECYCLE
+<span class="token function">npm</span> ERR<span class="token operator">!</span> syscall spawn
+<span class="token function">npm</span> ERR<span class="token operator">!</span> <span class="token function">file</span> <span class="token function">sh</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> errno ENOENT
+<span class="token function">npm</span> ERR<span class="token operator">!</span> ejs@2.7.4 postinstall: <span class="token variable"><span class="token variable">`</span>node ./postinstall.js<span class="token variable">`</span></span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> spawn ENOENT
+<span class="token function">npm</span> ERR<span class="token operator">!</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> Failed at the ejs@2.7.4 postinstall script.
+<span class="token function">npm</span> ERR<span class="token operator">!</span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> A complete log of this run can be found in:
+<span class="token function">npm</span> ERR<span class="token operator">!</span>     /root/.npm/_logs/2020-10-30T23_06_47_863Z-debug.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf node_modules
+<span class="token function">rm</span> -rf package-lock.json
+<span class="token function">npm</span> cache clean --force
+<span class="token function">npm</span> <span class="token function">install</span> --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
             </div>
             <hr/>
 
@@ -470,7 +491,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://silentstar.cn/posts/56868.html">https://silentstar.cn/posts/56868.html</a>
+                    <a href="https://silentstar.cn/posts/8c68042b.html">https://silentstar.cn/posts/8c68042b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -508,8 +529,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
+                                <a href="/tags/npm/">
+                                    <span class="chip bg-color">npm</span>
                                 </a>
                             
                         </div>
@@ -945,13 +966,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/posts/56868.html">
+                <a href="/posts/8c68042b.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/5.jpg" class="responsive-img" alt="Logon failed, use ctrl+c to cancel basic credential prompt解决办法">
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/12.jpg" class="responsive-img" alt="npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js">
                         
-                        <span class="card-title">Logon failed, use ctrl+c to cancel basic credential prompt解决办法</span>
+                        <span class="card-title">npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -962,14 +983,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category">
-                                    git
+                            <a href="/categories/npm/" class="post-category">
+                                    npm
                                 </a>
                             
                             
@@ -980,8 +1001,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/npm/">
+                        <span class="chip bg-color">npm</span>
                     </a>
                     
                 </div>
@@ -995,13 +1016,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/5de4689c.html">
+                <a href="/posts/210d2f66.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/16.jpg" class="responsive-img" alt="我的世界mod开发本地化和创造模式物品栏">
+                        <img src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/medias/featureimages/21.jpg" class="responsive-img" alt="Hexo+Github博客搭建教程Windows篇">
                         
-                        <span class="card-title">我的世界mod开发本地化和创造模式物品栏</span>
+                        <span class="card-title">Hexo+Github博客搭建教程Windows篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1012,14 +1033,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" class="post-category">
-                                    我的世界mod开发
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
@@ -1029,20 +1050,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">我的世界mod开发</span>
-                    </a>
-                    
-                    <a href="/tags/Forge/">
-                        <span class="chip bg-color">Forge</span>
-                    </a>
-                    
-                    <a href="/tags/Mod/">
-                        <span class="chip bg-color">Mod</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -1232,7 +1241,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.4k</span>&nbsp;字
+                class="white-color">20k</span>&nbsp;字
             
             
             

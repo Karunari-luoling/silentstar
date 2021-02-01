@@ -6,7 +6,7 @@
   <link href="https://silentstar.cn/atom.xml" rel="self"/>
   
   <link href="https://silentstar.cn/"/>
-  <updated>2021-02-01T00:36:39.666Z</updated>
+  <updated>2021-02-01T07:03:37.698Z</updated>
   <id>https://silentstar.cn/</id>
   
   <author>
@@ -17,18 +17,94 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js</title>
+    <link href="https://silentstar.cn/posts/8c68042b.html"/>
+    <id>https://silentstar.cn/posts/8c68042b.html</id>
+    <published>2021-02-01T06:57:22.000Z</published>
+    <updated>2021-02-01T07:03:37.698Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;QA&quot;&gt;&lt;a href=&quot;#QA&quot; class=&quot;headerlink&quot; title=&quot;QA!&quot;&gt;&lt;/a&gt;QA!&lt;/h2&gt;&lt;p&gt;由于布置不知道哪一步错了，所以他就报错了，经过我的不懈终于解决&lt;br&gt;错误如下&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="https://silentstar.cn/categories/npm/"/>
+    
+    
+    <category term="npm" scheme="https://silentstar.cn/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github博客搭建教程Windows篇</title>
+    <link href="https://silentstar.cn/posts/210d2f66.html"/>
+    <id>https://silentstar.cn/posts/210d2f66.html</id>
+    <published>2021-02-01T02:19:58.000Z</published>
+    <updated>2021-02-01T07:08:50.827Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://silentstar.cn/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://silentstar.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github博客搭建教程Linux篇</title>
+    <link href="https://silentstar.cn/posts/f4577764.html"/>
+    <id>https://silentstar.cn/posts/f4577764.html</id>
+    <published>2021-02-01T01:48:23.000Z</published>
+    <updated>2021-02-01T07:08:42.095Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://silentstar.cn/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://silentstar.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Logon failed, use ctrl+c to cancel basic credential prompt解决办法</title>
-    <link href="https://silentstar.cn/posts/56868.html"/>
-    <id>https://silentstar.cn/posts/56868.html</id>
+    <link href="https://silentstar.cn/posts/457fcab1.html"/>
+    <id>https://silentstar.cn/posts/457fcab1.html</id>
     <published>2021-01-31T13:56:50.000Z</published>
-    <updated>2021-02-01T00:36:39.666Z</updated>
+    <updated>2021-02-01T03:19:04.632Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Logon-failed-use-ctrl-c-to-cancel-basic-credential-prompt解决办法&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;使用&lt;code&gt;power shell&lt;/code&gt;推送时，在弹出框中输入github用户名和密码，但是推送失败，提示Logon failed, use ctrl+c to cancel basic credential prompt.&lt;br&gt;而使用&lt;code&gt;git</summary>
         
       
     
