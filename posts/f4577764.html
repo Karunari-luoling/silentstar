@@ -40,9 +40,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -414,7 +414,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-01
+                    2021-02-03
                 </div>
                 
 
@@ -517,7 +517,13 @@ v12.14.0
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><pre class="line-numbers language-bash"><code class="language-bash">apt Install <span class="token function">git</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo
+<h2 id="NPM优化"><a href="#NPM优化" class="headerlink" title="NPM优化"></a>NPM优化</h2><p>使用淘宝的镜像</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或者安装<code>cnpm</code></p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <h2 id="初始化hexo程序"><a href="#初始化hexo程序" class="headerlink" title="初始化hexo程序"></a>初始化hexo程序</h2><pre class="line-numbers language-bash"><code class="language-bash">hexo init <span class="token operator">&lt;</span>folder<span class="token operator">></span>
@@ -732,12 +738,6 @@ permalink_defaults:
   content_limit_delim: ' '
   order_by: -date
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="NPM优化"><a href="#NPM优化" class="headerlink" title="NPM优化"></a>NPM优化</h2><p>使用淘宝的镜像</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>或者安装<code>cnpm</code></p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="推送至github"><a href="#推送至github" class="headerlink" title="推送至github"></a>推送至github</h2><p>安装<code>hexo-deployer-git</code>插件进行推送</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save    
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>

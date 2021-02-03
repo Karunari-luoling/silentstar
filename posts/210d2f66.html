@@ -40,9 +40,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Ψ寂ω星Ψ" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -414,7 +414,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-02
+                    2021-02-03
                 </div>
                 
 
@@ -444,10 +444,16 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>在2020年的时候在群友的启发下开始了我的博客生涯。由于自己的技术问题经常导致博客崩溃，然后需要重新构建。也就是在21年1月29日我又双叒叕把博客搞崩了，然后重新创建花费了好长时间，这时我就在想：我是不是应该把我的搭建过程写出来以方便我及你们的查看，于是就有了这篇windows篇文章。</p>
-<h2 id="nodejs安装Windows篇"><a href="#nodejs安装Windows篇" class="headerlink" title="nodejs安装Windows篇"></a>nodejs安装Windows篇</h2><p>去官网下载稳定版本的<a href="https://nodejs.org/" target="_blank" rel="noopener"><code>nodejs</code></a>。<br>官方建议使用12.0<br>安装选项全部默认，一直Next。<br>最后安装好之后，打开<code>power shell</code>，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
+<h2 id="nodejs安装Windows篇"><a href="#nodejs安装Windows篇" class="headerlink" title="nodejs安装Windows篇"></a>nodejs安装Windows篇</h2><p>去官网下载稳定版本的<a href="https://nodejs.org/" target="_blank" rel="noopener"><code>nodejs</code></a>。<br>官方建议使用12.0，高版本nodejs不知道为什么一直不行（可能是我的问题😒<br>安装选项全部默认，一直Next。<br>最后安装好之后，打开<code>power shell</code>，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
 <h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>在 <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a> 中下载最新的git bash<br>一直next就可以了</p>
+<h2 id="NPM优化"><a href="#NPM优化" class="headerlink" title="NPM优化"></a>NPM优化</h2><p>使用淘宝的镜像</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或者安装<code>cnpm</code></p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在<code>power shell</code>中运行</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <h2 id="初始化hexo程序"><a href="#初始化hexo程序" class="headerlink" title="初始化hexo程序"></a>初始化hexo程序</h2><pre class="line-numbers language-bash"><code class="language-bash">hexo init <span class="token operator">&lt;</span>folder<span class="token operator">></span>
@@ -661,12 +667,6 @@ permalink_defaults:
   content_limit_delim: ' '
   order_by: -date
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="NPM优化"><a href="#NPM优化" class="headerlink" title="NPM优化"></a>NPM优化</h2><p>使用淘宝的镜像</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>或者安装<code>cnpm</code></p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="推送至github"><a href="#推送至github" class="headerlink" title="推送至github"></a>推送至github</h2><p>安装<code>hexo-deployer-git</code>插件进行推送</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save    
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
