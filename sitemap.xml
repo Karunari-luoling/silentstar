@@ -72,6 +72,13 @@
   </url>
   
   <url>
+    <loc>https://blog.silentstar.cn/categories/index.html</loc>
+    
+    <lastmod>2021-01-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.silentstar.cn/about/index.html</loc>
     
     <lastmod>2021-01-29</lastmod>
@@ -86,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/categories/index.html</loc>
-    
-    <lastmod>2021-01-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.silentstar.cn/posts/c137323d.html</loc>
-    
-    <lastmod>2021-01-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.silentstar.cn/posts/5de4689c.html</loc>
     
     <lastmod>2021-01-29</lastmod>
     
@@ -114,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/posts/e71903bd.html</loc>
+    <loc>https://blog.silentstar.cn/posts/5de4689c.html</loc>
     
     <lastmod>2021-01-29</lastmod>
     
@@ -122,6 +115,13 @@
   
   <url>
     <loc>https://blog.silentstar.cn/posts/63a9cc99.html</loc>
+    
+    <lastmod>2021-01-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.silentstar.cn/posts/e71903bd.html</loc>
     
     <lastmod>2021-01-29</lastmod>
     
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/posts/ac54a9a5.html</loc>
+    <loc>https://blog.silentstar.cn/posts/47f09587.html</loc>
     
     <lastmod>2021-01-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/posts/47f09587.html</loc>
+    <loc>https://blog.silentstar.cn/posts/ac54a9a5.html</loc>
     
     <lastmod>2021-01-29</lastmod>
     
@@ -256,14 +256,14 @@
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/tags/hexo/</loc>
+    <loc>https://blog.silentstar.cn/tags/npm/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/tags/npm/</loc>
+    <loc>https://blog.silentstar.cn/tags/hexo/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -307,14 +307,14 @@
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/categories/hexo/</loc>
+    <loc>https://blog.silentstar.cn/categories/npm/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.silentstar.cn/categories/npm/</loc>
+    <loc>https://blog.silentstar.cn/categories/hexo/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
