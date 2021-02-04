@@ -1097,20 +1097,20 @@
                 
                 
                 
-                <a href="/categories/Kali/" title="Kali: 2">
+                <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" title="我的世界mod开发: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">Kali
-                        <span class="tag-length">2</span>
+                            style="background-color: #F9EBEA;">我的世界mod开发
+                        <span class="tag-length">5</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" title="我的世界mod开发: 5">
+                <a href="/categories/Kali/" title="Kali: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">我的世界mod开发
-                        <span class="tag-length">5</span>
+                            style="background-color: #F5EEF8;">Kali
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -1133,20 +1133,20 @@
                 </a>
                 
                 
-                <a href="/categories/npm/" title="npm: 1">
+                <a href="/categories/hexo/" title="hexo: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">npm
-                        <span class="tag-length">1</span>
+                             chip-active "
+                            style="background-color: #FEF9E7;">hexo
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/hexo/" title="hexo: 2">
+                <a href="/categories/npm/" title="npm: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F8F9F9;">hexo
-                        <span class="tag-length">2</span>
+                             chip-default "
+                            style="background-color: #F8F9F9;">npm
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1456,6 +1456,34 @@ $(function () {
     <script async src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
+        <script src="//code.tidio.co/swzcea1wmfzktowqj1lelakj0thbhpcy.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
     
 
     

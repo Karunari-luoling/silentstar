@@ -1096,37 +1096,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Kali/" title="Kali: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Kali" style="background-color: #F9EBEA;">Kali
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Linux/" title="Linux: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Linux" style="background-color: #F5EEF8;">Linux
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" title="渗透测试: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="渗透测试" style="background-color: #D5F5E3;">渗透测试
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" title="我的世界mod开发: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="我的世界mod开发" style="background-color: #E8F8F5;">我的世界mod开发
+                            data-tagname="我的世界mod开发" style="background-color: #F9EBEA;">我的世界mod开发
                         <span class="tag-length">5</span>
                     </span>
                 </a>
@@ -1135,7 +1108,7 @@
                 <a href="/tags/Forge/" title="Forge: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Forge" style="background-color: #FEF9E7;">Forge
+                            data-tagname="Forge" style="background-color: #F5EEF8;">Forge
                         <span class="tag-length">5</span>
                     </span>
                 </a>
@@ -1144,7 +1117,7 @@
                 <a href="/tags/Mod/" title="Mod: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Mod" style="background-color: #F8F9F9;">Mod
+                            data-tagname="Mod" style="background-color: #D5F5E3;">Mod
                         <span class="tag-length">5</span>
                     </span>
                 </a>
@@ -1153,8 +1126,35 @@
                 <a href="/tags/Java/" title="Java: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Java" style="background-color: #82E0AA;">Java
+                            data-tagname="Java" style="background-color: #E8F8F5;">Java
                         <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Kali/" title="Kali: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Kali" style="background-color: #FEF9E7;">Kali
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Linux/" title="Linux: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Linux" style="background-color: #F8F9F9;">Linux
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" title="渗透测试: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="渗透测试" style="background-color: #82E0AA;">渗透测试
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -1186,20 +1186,20 @@
                 </a>
                 
                 
-                <a href="/tags/npm/" title="npm: 1">
+                <a href="/tags/hexo/" title="hexo: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="npm" style="background-color: #F8C471;">npm
-                        <span class="tag-length">1</span>
+                            data-tagname="hexo" style="background-color: #F8C471;">hexo
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/hexo/" title="hexo: 2">
+                <a href="/tags/npm/" title="npm: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="hexo" style="background-color: #F9E79F;">hexo
-                        <span class="tag-length">2</span>
+                            data-tagname="npm" style="background-color: #F9E79F;">npm
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1447,6 +1447,34 @@ $(function () {
     <script async src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
+        <script src="//code.tidio.co/swzcea1wmfzktowqj1lelakj0thbhpcy.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
     
 
     
