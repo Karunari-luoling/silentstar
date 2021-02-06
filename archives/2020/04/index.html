@@ -830,8 +830,6 @@
         
     </nav>
 <!-- 元宵节灯笼样式开始 -->
-var windowWidth = $(window).width();
-if (windowWidth > 768) {
 <style>
     @media only screen and (min-width: 1124px) {
         .nav-menu {
@@ -1032,12 +1030,17 @@ if (windowWidth > 768) {
         <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
     </div>
 </div>
-}
 <!-- 元宵节灯笼样式结束 -->
 </div>
 </header>
 <script>
     if((new Date().getMonth()) > 1){
+        $('.denglong').css('display', 'none');
+    }else{
+        $('.denglong').css('display', 'block');
+    }
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');

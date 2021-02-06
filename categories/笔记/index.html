@@ -830,8 +830,6 @@
         
     </nav>
 <!-- 元宵节灯笼样式开始 -->
-var windowWidth = $(window).width();
-if (windowWidth > 768) {
 <style>
     @media only screen and (min-width: 1124px) {
         .nav-menu {
@@ -1032,12 +1030,17 @@ if (windowWidth > 768) {
         <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
     </div>
 </div>
-}
 <!-- 元宵节灯笼样式结束 -->
 </div>
 </header>
 <script>
     if((new Date().getMonth()) > 1){
+        $('.denglong').css('display', 'none');
+    }else{
+        $('.denglong').css('display', 'block');
+    }
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
@@ -1100,11 +1103,11 @@ if (windowWidth > 768) {
                 
                 
                 
-                <a href="/categories/Kali/" title="Kali: 2">
+                <a href="/categories/Qt/" title="Qt: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">Kali
-                        <span class="tag-length">2</span>
+                            style="background-color: #F9EBEA;">Qt
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1118,29 +1121,20 @@ if (windowWidth > 768) {
                 </a>
                 
                 
-                <a href="/categories/%E7%AC%94%E8%AE%B0/" title="笔记: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #D5F5E3;">笔记
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/hexo/" title="hexo: 2">
+                <a href="/categories/Kali/" title="Kali: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">hexo
+                            style="background-color: #D5F5E3;">Kali
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/Qt/" title="Qt: 1">
+                <a href="/categories/%E7%AC%94%E8%AE%B0/" title="笔记: 4">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">Qt
-                        <span class="tag-length">1</span>
+                             chip-active "
+                            style="background-color: #E8F8F5;">笔记
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -1148,8 +1142,17 @@ if (windowWidth > 768) {
                 <a href="/categories/npm/" title="npm: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">npm
+                            style="background-color: #FEF9E7;">npm
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/hexo/" title="hexo: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8F9F9;">hexo
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
