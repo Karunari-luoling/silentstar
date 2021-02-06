@@ -1034,14 +1034,13 @@
 </div>
 </header>
 <script>
-    if((new Date().getMonth()) > 1){
-        $('.denglong').css('display', 'none');
-    }else{
-        $('.denglong').css('display', 'block');
-    }
     var windowWidth = $(window).width();
     if (windowWidth > 768) {
-        $('.denglong').css('display', 'none');
+        if((new Date().getMonth()) > 1){
+            $('.denglong').css('display', 'none');
+        }else{
+            $('.denglong').css('display', 'block');
+        }
     }else{
         $('.denglong').css('display', 'block');
     }
