@@ -306,13 +306,6 @@
 
 
 
-<script type="text/javascript">
-    //只在桌面版网页启用特效
-    var windowWidth = $(window).width();
-    if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-    }
-    </script>
 
  <div id="loading-container">
      <p class="loading-text">嘘~  正在从服务器偷取页面 . . . </p> 
@@ -325,7 +318,8 @@
      </div>
  </div><body>
 
-    <header class="navbar-fixed">
+    <!--
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -576,7 +570,7 @@
     </nav>
 
 </header>
-<!--
+-->
 <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -1049,7 +1043,6 @@
     }
 </script>
 </header>
--->
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -1106,29 +1099,11 @@
                 
                 
                 
-                <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" title="我的世界mod开发: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">我的世界mod开发
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/categories/Kali/" title="Kali: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            style="background-color: #F5EEF8;">Kali
+                            style="background-color: #F9EBEA;">Kali
                         <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E7%AC%94%E8%AE%B0/" title="笔记: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">笔记
-                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -1136,8 +1111,26 @@
                 <a href="/categories/Qt/" title="Qt: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">Qt
+                            style="background-color: #F5EEF8;">Qt
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cmod%E5%BC%80%E5%8F%91/" title="我的世界mod开发: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">我的世界mod开发
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E7%AC%94%E8%AE%B0/" title="笔记: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">笔记
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -1496,7 +1489,13 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/instantpage/instantpage.js" type="module"></script>
     
-
+    <script type="text/javascript">
+        //只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        }
+    </script>
 </body>
 
 </html>

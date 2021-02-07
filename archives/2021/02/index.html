@@ -306,13 +306,6 @@
 
 
 
-<script type="text/javascript">
-    //只在桌面版网页启用特效
-    var windowWidth = $(window).width();
-    if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-    }
-    </script>
 
  <div id="loading-container">
      <p class="loading-text">嘘~  正在从服务器偷取页面 . . . </p> 
@@ -325,7 +318,8 @@
      </div>
  </div><body>
 
-    <header class="navbar-fixed">
+    <!--
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -576,7 +570,7 @@
     </nav>
 
 </header>
-<!--
+-->
 <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -1049,7 +1043,6 @@
     }
 </script>
 </header>
--->
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -1581,7 +1574,13 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/wzhrdx/silentstar/libs/instantpage/instantpage.js" type="module"></script>
     
-
+    <script type="text/javascript">
+        //只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        }
+    </script>
 </body>
 
 </html>
