@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo添加春节装饰</title>
+      <link href="posts/5fe09bd8.html"/>
+      <url>posts/5fe09bd8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Hexo-博客-Matery-添加春节装饰"><a href="#Hexo-博客-Matery-添加春节装饰" class="headerlink" title="Hexo 博客 Matery 添加春节装饰"></a>Hexo 博客 Matery 添加春节装饰</h2><blockquote><p>快过年了，给博客加个灯笼吧~</p></blockquote><p>过年了，想让自己的Matery主题更有些年味，在大佬那发现他刚好写了篇博客，来阐述如何实现春节灯笼，参考大佬写的修改方法：<a href="https://notes.zhangxiaocai.cn/posts/166ffc86.html" target="_blank" rel="noopener">Hexo 添加春节装饰</a></p><h2 id="代码“魔改”"><a href="#代码“魔改”" class="headerlink" title="代码“魔改”"></a>代码“魔改”</h2><p>这里在我使用的过程中发现了一个问题，那就是在手机访问的时候灯笼会把菜单的按钮挡死，导致无法打开菜单。</p><p>所以我对其进行了一个小小的改造，代码如下</p><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">    <span class="token keyword">var</span> windowWidth <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>windowWidth <span class="token operator">></span> <span class="token number">768</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.denglong'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'display'</span><span class="token punctuation">,</span> <span class="token string">'none'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.denglong'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'display'</span><span class="token punctuation">,</span> <span class="token string">'block'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.denglong'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'display'</span><span class="token punctuation">,</span> <span class="token string">'none'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这里我修改了原来的<code>if-else</code>命令，给其加了一个嵌套，首先他会进行桌面大小的判断，如果判断桌面大于<code>768</code>的话就会再次判断是否月份为一月，从而实现自动在一月打开，其他月份不显示。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>npm install时遇到 ejs@2.7.4 postinstall /root/blog/node_modules/ejs &gt; node ./postinstall.js</title>
       <link href="posts/8c68042b.html"/>
       <url>posts/8c68042b.html</url>
